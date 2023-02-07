@@ -17,6 +17,9 @@ const Container = styled.div`
 const HeroContent = styled.div`
   max-width: 50%;
   margin-top: 2.4rem;
+  background-color: transparent;
+  color: #b8cad2;
+  /* @media screen and (); */
 `;
 
 const Hero = () => {
