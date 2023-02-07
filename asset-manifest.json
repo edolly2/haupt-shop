@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/haupt-shop/static/css/main.a6ab37f8.css",
+    "main.js": "/haupt-shop/static/js/main.b77ca105.js",
+    "static/media/haupt-background.png": "/haupt-shop/static/media/haupt-background.90cd3ac93b4a7adcaaed.png",
+    "static/media/haupt-shop.png": "/haupt-shop/static/media/haupt-shop.328e3adc62e737de160c.png",
+    "index.html": "/haupt-shop/index.html",
+    "main.a6ab37f8.css.map": "/haupt-shop/static/css/main.a6ab37f8.css.map",
+    "main.b77ca105.js.map": "/haupt-shop/static/js/main.b77ca105.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6ab37f8.css",
+    "static/js/main.b77ca105.js"
+  ]
+}
