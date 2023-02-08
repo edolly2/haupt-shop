@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/haupt-shop/static/css/main.a6ab37f8.css",
-    "main.js": "/haupt-shop/static/js/main.b77ca105.js",
+    "main.css": "/haupt-shop/static/css/main.f788bf97.css",
+    "main.js": "/haupt-shop/static/js/main.bfbf7901.js",
     "static/media/haupt-background.png": "/haupt-shop/static/media/haupt-background.90cd3ac93b4a7adcaaed.png",
     "static/media/haupt-shop.png": "/haupt-shop/static/media/haupt-shop.328e3adc62e737de160c.png",
+    "static/media/badge-2.png": "/haupt-shop/static/media/badge-2.79d205d05debcaac64f4.png",
+    "static/media/badge-3.png": "/haupt-shop/static/media/badge-3.fb6cf26e7b5cecc8e8aa.png",
+    "static/media/badge-1.png": "/haupt-shop/static/media/badge-1.07faca63a35298150b39.png",
     "index.html": "/haupt-shop/index.html",
-    "main.a6ab37f8.css.map": "/haupt-shop/static/css/main.a6ab37f8.css.map",
-    "main.b77ca105.js.map": "/haupt-shop/static/js/main.b77ca105.js.map"
+    "main.f788bf97.css.map": "/haupt-shop/static/css/main.f788bf97.css.map",
+    "main.bfbf7901.js.map": "/haupt-shop/static/js/main.bfbf7901.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6ab37f8.css",
-    "static/js/main.b77ca105.js"
+    "static/css/main.f788bf97.css",
+    "static/js/main.bfbf7901.js"
   ]
 }
