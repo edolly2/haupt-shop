@@ -1,5 +1,4 @@
 import './App.css';
-import NavBar from './components/NavBar';
 import PageLayout from './layout/PageLayout';
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage';
@@ -9,6 +8,8 @@ import ContactPage from './pages/ContactPage';
 import InventoryPage from './pages/InventoryPage';
 import QuotePage from './pages/QuotePage';
 import GalleryPage from './pages/GalleryPage';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <PageLayout>
-        <NavBar />
+        <Header />
         <Routes>
           <Route path='/' exact element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
@@ -26,7 +27,9 @@ function App() {
           <Route path='/contact' element={<ContactPage />} />
           <Route path='/quote' element={<QuotePage />} />
         </Routes>
+        <Footer />
       </PageLayout>
+
     </div>
   );
 }

@@ -1,60 +1,66 @@
- body {
-   font-family: 'Poppins', sans-serif;
-   font-weight: 300;
-   overflow-x: hidden;
- }
+body,
+html {
+  padding: 0;
+  overflow-x: hidden;
+}
 
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
-   font-family: 'DM Sans', sans-serif;
-   font-weight: 700;
- }
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
 
- h1 {
-   font-size: calc(32px + (48 - 32) * ((100vw - 360px) / (1920 - 360)));
- }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
 
- h2 {
-   font-size: calc(26px + (36 - 26) * ((100vw - 360px) / (1920 - 360)));
- }
+h1 {
+  font-size: calc(32px + (48 - 32) * ((100vw - 360px) / (1920 - 360)));
+}
 
- h3 {
-   font-size: calc(22px + (28 - 22) * ((100vw - 360px) / (1920 - 360)));
- }
+h2 {
+  font-size: calc(26px + (36 - 26) * ((100vw - 360px) / (1920 - 360)));
+}
 
- h4 {
-   font-size: calc(16px + (18 - 16) * ((100vw - 360px) / (1920 - 360)));
- }
+h3 {
+  font-size: calc(22px + (28 - 22) * ((100vw - 360px) / (1920 - 360)));
+}
 
- body,
- h5,
- li {
-   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
- }
+h4 {
+  font-size: calc(16px + (18 - 16) * ((100vw - 360px) / (1920 - 360)));
+}
 
- .icon {
-   font-size: 32px;
- }
+body,
+h5,
+li {
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+}
 
- .icon:hover {
-   cursor: pointer;
-   transform: scale(1.1);
- }
+.icon {
+  font-size: 32px;
+}
 
- .hamburger-icon {
-   color: #b8cad2;
- }
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
- @media screen and (min-width: 801px) {
-   .hamburger-icon {
-     display: none;
-   }
- }
+.hamburger-icon {
+  color: #b8cad2;
+}
 
- .active {
-   color: #005cf0;
- }
+@media screen and (min-width: 801px) {
+  .hamburger-icon {
+    display: none;
+  }
+}
+
+.active {
+  color: #005cf0;
+}

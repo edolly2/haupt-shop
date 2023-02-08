@@ -71,7 +71,7 @@ const NavBtn = styled.button`
   }
 `;
 
-const NavBar = () => {
+const MobileNavBar = () => {
   const [menuActive, setMenuActive] = useState(false);
 
   return (
@@ -172,4 +172,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default MobileNavBar;
