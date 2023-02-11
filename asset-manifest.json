@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/haupt-shop/static/css/main.eef35cb8.css",
-    "main.js": "/haupt-shop/static/js/main.ffc4e72f.js",
+    "main.css": "/haupt-shop/static/css/main.79da3f0f.css",
+    "main.js": "/haupt-shop/static/js/main.e3b52716.js",
     "static/media/haupt-background.png": "/haupt-shop/static/media/haupt-background.90cd3ac93b4a7adcaaed.png",
     "static/media/haupt-shop.png": "/haupt-shop/static/media/haupt-shop.328e3adc62e737de160c.png",
-    "static/media/badge-2.png": "/haupt-shop/static/media/badge-2.79d205d05debcaac64f4.png",
-    "static/media/badge-3.png": "/haupt-shop/static/media/badge-3.fb6cf26e7b5cecc8e8aa.png",
-    "static/media/badge-1.png": "/haupt-shop/static/media/badge-1.07faca63a35298150b39.png",
+    "static/media/satisfaction-g.svg": "/haupt-shop/static/media/satisfaction-g.415cf930c068152597a748e5c86a0844.svg",
+    "static/media/expert.svg": "/haupt-shop/static/media/expert.5fd7dcf9de339726a4c6701d90e31f67.svg",
+    "static/media/trusted-dealer.svg": "/haupt-shop/static/media/trusted-dealer.0591f303dd028b635e773483804ab0af.svg",
     "index.html": "/haupt-shop/index.html",
-    "main.eef35cb8.css.map": "/haupt-shop/static/css/main.eef35cb8.css.map",
-    "main.ffc4e72f.js.map": "/haupt-shop/static/js/main.ffc4e72f.js.map"
+    "main.79da3f0f.css.map": "/haupt-shop/static/css/main.79da3f0f.css.map",
+    "main.e3b52716.js.map": "/haupt-shop/static/js/main.e3b52716.js.map"
   },
   "entrypoints": [
-    "static/css/main.eef35cb8.css",
-    "static/js/main.ffc4e72f.js"
+    "static/css/main.79da3f0f.css",
+    "static/js/main.e3b52716.js"
   ]
 }
