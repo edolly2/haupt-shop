@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/haupt-shop/static/css/main.eef35cb8.css",
-    "main.js": "/haupt-shop/static/js/main.a074873e.js",
+    "main.js": "/haupt-shop/static/js/main.ffc4e72f.js",
     "static/media/haupt-background.png": "/haupt-shop/static/media/haupt-background.90cd3ac93b4a7adcaaed.png",
     "static/media/haupt-shop.png": "/haupt-shop/static/media/haupt-shop.328e3adc62e737de160c.png",
     "static/media/badge-2.png": "/haupt-shop/static/media/badge-2.79d205d05debcaac64f4.png",
@@ -9,10 +9,10 @@
     "static/media/badge-1.png": "/haupt-shop/static/media/badge-1.07faca63a35298150b39.png",
     "index.html": "/haupt-shop/index.html",
     "main.eef35cb8.css.map": "/haupt-shop/static/css/main.eef35cb8.css.map",
-    "main.a074873e.js.map": "/haupt-shop/static/js/main.a074873e.js.map"
+    "main.ffc4e72f.js.map": "/haupt-shop/static/js/main.ffc4e72f.js.map"
   },
   "entrypoints": [
     "static/css/main.eef35cb8.css",
-    "static/js/main.a074873e.js"
+    "static/js/main.ffc4e72f.js"
   ]
 }
