@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import MobileNavBar from './MobileNavBar';
+import DesktopNavBar from './DesktopNavBar';
 
 const Container = styled.header`
   /* position: relative; */
@@ -28,7 +29,7 @@ const Container = styled.header`
 const Header = (props) => {
   const [width, setWidth] = useState(window.innerWidth);
   // const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
-  const breakpoint = 800;
+  const breakpoint = 920;
   useEffect(() => {
     window.addEventListener('resize', () => setWidth(window.innerWidth));
   }, []);
@@ -39,7 +40,7 @@ const Header = (props) => {
   ) : (
     // </Container>
     // <Container>
-    <MobileNavBar />
+    <DesktopNavBar />
     // </Container>
   );
 };

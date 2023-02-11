@@ -9,7 +9,9 @@ import InventoryPage from './pages/InventoryPage';
 import QuotePage from './pages/QuotePage';
 import GalleryPage from './pages/GalleryPage';
 import Footer from './components/Footer';
+// import MobileNavBar from './components/MobileNavBar';
 import Header from './components/Header';
+
 
 
 
@@ -18,6 +20,7 @@ function App() {
     <div className="App">
       <PageLayout>
         <Header />
+        {/* <MobileNavBar /> */}
         <Routes>
           <Route path='/' exact element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />

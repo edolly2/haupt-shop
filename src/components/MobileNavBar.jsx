@@ -11,10 +11,8 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 100%;
-  @media screen and (max-width: 800px) {
-    position: relative;
-  }
+  /* width: 100%; */
+  position: relative;
 `;
 const Nav = styled.nav`
   /* margin-right: 7%; */
@@ -23,33 +21,23 @@ const Nav = styled.nav`
 const NavList = styled.ul`
   display: flex;
   gap: 2.4rem;
-  padding: 0 1.6rem;
   list-style: none;
   background-color: rgb(33, 33, 33);
-  @media screen and (max-width: 800px) {
-    flex-direction: column;
-    position: absolute;
-    z-index: 2;
-    top: 100%;
-    right: 0;
-    padding: 2.4rem 1.6rem;
-    width: 40vw;
-    gap: 2.4rem;
-  }
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  right: 0;
+  padding: 2.4rem 1.6rem;
+  width: 40vw;
 `;
 const NavListItem = styled.li`
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
   color: #b8cad2;
   &:hover {
-    color: #005cf0;
-    transform: scale(1.1);
-    @media screen and (max-width: 800px) {
-      &:hover {
-        transform: none;
-      }
-    }
+    transform: none;
   }
 `;
 
@@ -80,13 +68,13 @@ const MobileNavBar = () => {
       <Nav>
         <HiOutlineMenuAlt3
           className='icon hamburger-icon'
-          style={{ display: menuActive ? 'none' : 'block' }}
+          style={{ display: menuActive ? 'none' : 'flex' }}
           onClick={() => setMenuActive(!menuActive)}
         />
 
         <CgClose
           className='icon hamburger-icon'
-          style={{ display: menuActive ? 'block' : 'none' }}
+          style={{ display: menuActive ? 'flex' : 'none' }}
           onClick={() => setMenuActive(!menuActive)}
         />
         <NavList
