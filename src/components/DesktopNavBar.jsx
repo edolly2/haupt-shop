@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);
-  padding: 1.6rem;
+  padding: 36px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -24,16 +24,6 @@ const NavList = styled.ul`
   padding: 0 1.6rem;
   list-style: none;
   background-color: rgb(33, 33, 33);
-  /* @media screen and (max-width: 800px) {
-    flex-direction: column;
-    position: absolute;
-    z-index: 2;
-    top: 100%;
-    right: 0;
-    padding: 2.4rem 1.6rem;
-    width: 40vw;
-    gap: 2.4rem;
-  } */
 `;
 const NavListItem = styled.li`
   font-family: 'DM Sans', sans-serif;
@@ -53,7 +43,7 @@ const NavListItem = styled.li`
 `;
 
 const NavLogo = styled.img`
-  max-width: 10rem;
+  max-width: 15rem;
   height: auto;
 `;
 

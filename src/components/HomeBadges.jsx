@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import Badge1 from '../assets/images/badge-1.png';
-import Badge2 from '../assets/images/badge-2.png';
-import Badge3 from '../assets/images/badge-3.png';
+import Badge1 from '../assets/images/trusted-dealer.svg';
+import Badge2 from '../assets/images/satisfaction-g.svg';
+import Badge3 from '../assets/images/expert.svg';
 
 const Container = styled.div`
   min-height: 50vh;
   /* width: 100%; */
   background-color: #b8cad2;
-  padding: 4.8rem 2.4rem;
+  padding: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,11 +45,13 @@ const HomeBadges = () => {
   return (
     <Container>
       <BadgeTitle>Badge Section Title</BadgeTitle>
+      <div className='line' style={{ borderRadius: '100%' }}></div>
       <BadgeWrapper>
         <BadgeImg src={Badge1} alt='#' />
         <BadgeImg src={Badge2} alt='#' />
         <BadgeImg src={Badge3} alt='#' />
       </BadgeWrapper>
+      <div className='line' style={{ width: '50%' }}></div>
     </Container>
   );
 };
