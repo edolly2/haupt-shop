@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import HeroBack from '../assets/images/haupt-background.png';
 
 const Container = styled.div`
-  min-width: 100vw;
+  /* min-width: 100vw; */
   min-height: 60vh;
-  max-width: 100vw;
+  /* max-width: 100vw; */
   max-height: 60vh;
   margin-top: -1px;
   background-image: url(${HeroBack});
