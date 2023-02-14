@@ -4,10 +4,12 @@ import Logo from '../assets/images/haupt-shop.png';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { CgClose } from 'react-icons/cg';
 import { useState } from 'react';
+import InfoBar from './InfoBar';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);
   padding: 36px;
+  margin-top: 36px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -66,6 +68,7 @@ const MobileNavBar = (props) => {
 
   return (
     <Container>
+      <InfoBar />
       <NavLogo src={Logo} alt='llll' />
       <Nav>
         <HiOutlineMenuAlt3

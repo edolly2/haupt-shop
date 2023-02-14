@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/images/haupt-shop.png';
+import InfoBar from './InfoBar';
 // import { useState } from 'react';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);
+  margin-top: 3.6rem;
   padding: 36px;
   display: flex;
   justify-content: space-between;
@@ -65,6 +67,7 @@ const DesktopNavBar = (props) => {
 
   return (
     <Container>
+      <InfoBar />
       <NavLogo src={Logo} alt='llll' />
       <Nav>
         <NavList>
