@@ -1,5 +1,7 @@
+import MainLayout from '../layout/MainLayout';
+
 const ServicesPage = () => {
-  return <div>ServicesPage</div>;
+  return <MainLayout>ServicesPage</MainLayout>;
 };
 
 export default ServicesPage;

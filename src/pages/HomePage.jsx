@@ -5,11 +5,13 @@ import MainLayout from '../layout/MainLayout';
 
 const HomePage = () => {
   return (
-    <MainLayout>
+    // <MainLayout>
+    <>
       <Hero />
       <HomeBadges />
       <HomeContent />
-    </MainLayout>
+    </>
+    // </MainLayout>
   );
 };
 

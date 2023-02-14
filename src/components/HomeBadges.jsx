@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const BadgeWrapper = styled.div`
+const BadgeContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +22,20 @@ const BadgeWrapper = styled.div`
   @media screen and (max-width: 769px) {
     flex-direction: column;
     gap: 2.4rem;
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    width: 100%;
+  }
+`;
+
+const BadgeWrapper = styled.div`
+  display: flex;
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    gap: 2.4rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 `;
 
@@ -37,21 +51,66 @@ const BadgeImg = styled.img`
   min-width: 13rem;
   height: auto;
   @media screen and (max-width: 769px) {
-    /* max-width: 13rem; */
+    max-width: 20rem;
+    /* width: 10vw; */
+    min-width: 8rem;
+  }
+`;
+
+const Line = styled.div`
+  width: 70%;
+  height: 4px;
+  background-color: #011638;
+  margin: 36px 0;
+  border-radius: 100%;
+  @media screen and (max-width: 769px) {
+    width: 100%;
+  }
+`;
+
+const SmallLine = styled.div`
+  width: 70%;
+  height: 4px;
+  background-color: #011638;
+  margin: 36px 0;
+  border-radius: 100%;
+  width: 50%;
+  @media screen and (max-width: 769px) {
+    width: 100%;
   }
 `;
 
 const HomeBadges = () => {
   return (
     <Container>
-      <BadgeTitle>Badge Section Title</BadgeTitle>
-      <div className='line' style={{ borderRadius: '100%' }}></div>
-      <BadgeWrapper>
-        <BadgeImg src={Badge1} alt='#' />
-        <BadgeImg src={Badge2} alt='#' />
-        <BadgeImg src={Badge3} alt='#' />
-      </BadgeWrapper>
-      <div className='line' style={{ width: '50%' }}></div>
+      <BadgeTitle>Why Choose Us?</BadgeTitle>
+      <Line></Line>
+      <BadgeContainer>
+        <BadgeWrapper>
+          <BadgeImg src={Badge1} alt='#' />
+          {/* <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            tempore nisi omnis mollitia. Ratione voluptatum corrupti iusto
+            veniam sequi sapiente dignissimos accusantium sed fugiat facilis.
+          </p> */}
+        </BadgeWrapper>
+        <BadgeWrapper>
+          <BadgeImg src={Badge2} alt='#' />
+          {/* <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+            reprehenderit. Laboriosam ea rem explicabo consectetur.
+          </p> */}
+        </BadgeWrapper>
+        <BadgeWrapper>
+          <BadgeImg src={Badge3} alt='#' />
+          {/* <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            delectus cupiditate vero, provident reiciendis porro maxime quae.
+            Cupiditate, aliquam hic.
+          </p> */}
+        </BadgeWrapper>
+      </BadgeContainer>
+      <SmallLine></SmallLine>
     </Container>
   );
 };

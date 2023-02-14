@@ -11,16 +11,22 @@ import GalleryPage from './pages/GalleryPage';
 import Footer from './components/Footer';
 // import MobileNavBar from './components/MobileNavBar';
 import Header from './components/Header';
+import QuoteModal from './components/QuoteModal';
+import { useState } from 'react';
+import Overlay from './components/Overlay';
 
 
 
 
 function App() {
+  const [quoteBtnClicked, setQuoteBtnClicked] = useState(false);
   return (
-    <div className="App">
+    <div className="App" style={{ maxHeight: quoteBtnClicked ? '100vh' : null }}>
+
       <PageLayout>
-        <Header />
-        {/* <MobileNavBar /> */}
+        <Overlay style={{ display: quoteBtnClicked ? 'flex' : 'none' }} />
+        <QuoteModal style={{ display: quoteBtnClicked ? 'flex' : 'none' }} onModalExitClick={() => { setQuoteBtnClicked(false) }} />
+        <Header onQuoteClickMB={() => { setQuoteBtnClicked(true) }} onQuoteClickDT={() => { setQuoteBtnClicked(true) }} />
         <Routes>
           <Route path='/' exact element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />

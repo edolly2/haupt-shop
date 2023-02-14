@@ -36,11 +36,11 @@ const Header = (props) => {
 
   return width < breakpoint ? (
     // <Container>
-    <MobileNavBar />
+    <MobileNavBar onQuoteClickMB={props.onQuoteClickMB} />
   ) : (
     // </Container>
     // <Container>
-    <DesktopNavBar />
+    <DesktopNavBar onQuoteClickDT={props.onQuoteClickDT} />
     // </Container>
   );
 };

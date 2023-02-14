@@ -1,5 +1,7 @@
+import MainLayout from '../layout/MainLayout';
+
 const GalleryPage = () => {
-  return <div>GalleryPage</div>;
+  return <MainLayout>GalleryPage</MainLayout>;
 };
 
 export default GalleryPage;

@@ -1,5 +1,7 @@
+import MainLayout from '../layout/MainLayout';
+
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return <MainLayout>ContactPage</MainLayout>;
 };
 
 export default ContactPage;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/images/haupt-shop.png';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);
@@ -60,8 +60,8 @@ const NavBtn = styled.button`
   }
 `;
 
-const DesktopNavBar = () => {
-  const [menuActive, setMenuActive] = useState(false);
+const DesktopNavBar = (props) => {
+  // const [menuActive, setMenuActive] = useState(false);
 
   return (
     <Container>
@@ -86,9 +86,11 @@ const DesktopNavBar = () => {
           <NavLink to='/contact'>
             <NavListItem>Contact</NavListItem>
           </NavLink>
-          <NavLink to='/quote'>
+          <NavLink>
             <NavListItem>
-              <NavBtn>Get a Free Quote</NavBtn>
+              <NavBtn type='button' onClick={props.onQuoteClickDT}>
+                Get a Free Quote
+              </NavBtn>
             </NavListItem>
           </NavLink>
         </NavList>

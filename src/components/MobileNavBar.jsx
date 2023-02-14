@@ -26,14 +26,15 @@ const NavList = styled.ul`
   flex-direction: column;
   position: absolute;
   z-index: 2;
-  top: 100%;
+  top: 99.5%;
   right: 0;
   padding: 36px;
-  width: 40vw;
+  width: 60vw;
 `;
 const NavListItem = styled.li`
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
+  white-space: nowrap;
   /* font-size: 1.6rem; */
   color: #b8cad2;
   &:hover {
@@ -52,6 +53,7 @@ const NavBtn = styled.button`
   border: 2px solid #005cf0;
   color: #005cf0;
   background-color: transparent;
+  width: 15rem;
   &:hover {
     cursor: pointer;
     background-color: #005cf0;
@@ -59,7 +61,7 @@ const NavBtn = styled.button`
   }
 `;
 
-const MobileNavBar = () => {
+const MobileNavBar = (props) => {
   const [menuActive, setMenuActive] = useState(false);
 
   return (
@@ -148,10 +150,11 @@ const MobileNavBar = () => {
                 setMenuActive(false);
               }, 50);
             }}
-            to='/quote'
           >
             <NavListItem>
-              <NavBtn>Get a Free Quote</NavBtn>
+              <NavBtn type='button' onClick={props.onQuoteClickMB}>
+                Free Quote
+              </NavBtn>
             </NavListItem>
           </NavLink>
         </NavList>

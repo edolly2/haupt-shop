@@ -158,14 +158,18 @@ li {
   }
 }
 
-.active {
-  color: #005cf0;
+.info-icon,
+.exit-icon {
+  color: #b8cad2;
 }
 
-.line {
-  width: 70%;
-  height: 4px;
-  background-color: #011638;
-  margin: 36px 0;
-  border-radius: 100%;
+.info-icon:hover,
+.exit-icon:hover {
+  cursor: pointer;
+  color: #005cf0;
+  transform: scale(1.1);
+}
+
+.active {
+  color: #005cf0;
 }

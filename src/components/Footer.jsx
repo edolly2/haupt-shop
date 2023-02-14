@@ -9,10 +9,11 @@ const PageFooter = styled.footer`
   /* left: 0; */
   /* max-height: 10rem; */
   min-height: 10rem;
-  background-color: purple;
+  background-color: rgb(0, 0, 0);
   color: white;
   display: flex;
   flex-direction: column;
+  /* box-shadow: inset 0 6px 10px black; */
   /* padding: 2.4rem 4.8rem 0 4.8rem; */
 `;
 
@@ -35,8 +36,8 @@ const FooterLogo = styled.img`
 const FooterBottom = styled.div`
   display: flex;
   gap: 2.4rem;
-  background-color: teal;
-  padding: 8px 0 8px 36px;
+  background-color: rgb(0, 0, 0);
+  padding: 2px 0 2px 36px;
   font-size: 0.7rem;
   margin: 0;
 `;
@@ -63,9 +64,9 @@ const Footer = () => {
         </FooterSection>
       </FooterWrapper>
       <FooterBottom>
-        <FooterHeadings>Copyright</FooterHeadings>
-        <FooterHeadings>Terms</FooterHeadings>
-        <FooterHeadings>Privacy</FooterHeadings>
+        <small style={{ fontSize: '11px' }}>Copyright</small>
+        <small style={{ fontSize: '11px' }}>Terms</small>
+        <small style={{ fontSize: '11px' }}>Privacy</small>
       </FooterBottom>
     </PageFooter>
   );

@@ -1,5 +1,7 @@
+import MainLayout from '../layout/MainLayout';
+
 const InventoryPage = () => {
-  return <div>InventoryPage</div>;
+  return <MainLayout>InventoryPage</MainLayout>;
 };
 
 export default InventoryPage;

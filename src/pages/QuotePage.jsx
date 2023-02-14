@@ -1,5 +1,7 @@
+import MainLayout from '../layout/MainLayout';
+
 const QuotePage = () => {
-  return <div>QuotePage</div>;
+  return <MainLayout>QuotePage</MainLayout>;
 };
 
 export default QuotePage;
