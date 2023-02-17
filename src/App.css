@@ -177,3 +177,8 @@ li {
 .top-bar-icon {
   /* font-size: 36px; */
 }
+
+.footer-icon {
+  color: pink;
+  font-size: 24px;
+}
