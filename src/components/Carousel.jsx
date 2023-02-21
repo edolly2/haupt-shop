@@ -1,83 +1,3 @@
-// const prevButton = document.querySelector('.prevBtn');
-// const nextButton = document.querySelector('.nextBtn');
-// const carousel = document.querySelector('#carousel');
-
-// let scrollAmount = 0;
-// const itemWidth = carousel
-//   .querySelector('.carouselItem')
-//   .getBoundingClientRect().width;
-// const itemsCount = carousel.querySelectorAll('.carouselItem').length;
-// const totalWidth = itemWidth * itemsCount;
-
-// window.addEventListener('resize', () => {
-//   const itemWidth = carousel
-//     .querySelector('.carousel-item')
-//     .getBoundingClientRect().width;
-//   const itemsCount = carousel.querySelectorAll('.carousel-item').length;
-//   const totalWidth = itemWidth * itemsCount;
-//   scrollAmount = 0;
-//   carousel.scrollTo({
-//     left: scrollAmount,
-//     behavior: 'instant',
-//   });
-// });
-
-// const Carousel = () => {
-//   return (
-//     <CarouselContainer>
-//       <CarouselCarousel id='carousel'>
-//         <CarouselItem className='carouselItem'>
-//           <CarouselImg src={Dodge} alt='X' />
-//         </CarouselItem>
-//         <CarouselItem className='carouselItem'>
-//           <CarouselImg src={Camaro} alt='X' />
-//         </CarouselItem>
-//         <CarouselItem className='carouselItem'>
-//           <CarouselImg src={Bug} alt='X' />
-//         </CarouselItem>
-//         <CarouselItem className='carouselItem'>
-//           <CarouselImg src={Semi} alt='X' />
-//         </CarouselItem>
-//         <CarouselItem className='carouselItem'>
-//           <CarouselImg src={Redneck} alt='X' />
-//         </CarouselItem>
-//       </CarouselCarousel>
-//       <CarouselPrevBtn
-//         id='prevBtn'
-//         onClick={() => {
-//           scrollAmount -= itemWidth;
-//           if (scrollAmount < 0) {
-//             scrollAmount = 0;
-//           }
-//           carousel.scrollTo({
-//             left: scrollAmount,
-//             behavior: 'smooth',
-//           });
-//         }}
-//       >
-//         Prev
-//       </CarouselPrevBtn>
-//       <CarouselNextBtn
-//         id='nextBtn'
-//         onClick={() => {
-//           scrollAmount += itemWidth;
-//           if (scrollAmount > totalWidth - itemWidth) {
-//             scrollAmount = totalWidth - itemWidth;
-//           }
-//           carousel.scrollTo({
-//             left: scrollAmount,
-//             behavior: 'smooth',
-//           });
-//         }}
-//       >
-//         Next
-//       </CarouselNextBtn>
-//     </CarouselContainer>
-//   );
-// };
-
-// export default Carousel;
-
 import { useState } from 'react';
 import styled from 'styled-components';
 import Bug from '../assets/images/haupt-bug.jpg';
@@ -90,6 +10,7 @@ import { GrNext, GrPrevious } from 'react-icons/gr';
 const CarouselContainer = styled.div`
   position: relative;
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -97,7 +18,8 @@ const CarouselContainer = styled.div`
   margin: 0 auto;
   z-index: 1;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  gap: 36px;
 `;
 const CarouselCarousel = styled.div`
   display: flex;
@@ -115,20 +37,39 @@ const CarouselItem = styled.div`
   /* justify-content: center; */
   /* align-items: center; */
   scroll-snap-align: start;
+  background-color: black;
+  transform: rotate(6deg);
 `;
 const CarouselImg = styled.img`
-  /* width: 100%; */
-  min-width: 50vw;
+  width: 50vw;
+  /* min-width: 70vw; */
   /* min-width: 100%; */
-  max-width: 50vw;
+  /* max-width: 60vw; */
   /* height: 100%; */
-  height: auto;
-  max-height: 50vh;
+  /* height: auto; */
+  height: 70vh;
+  /* max-height: 70vh; */
   object-fit: cover;
+  transform: rotate(-6deg);
+`;
+
+const CarouselBtnContainer = styled.div`
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 50rem; */
+`;
+
+const CarouselBtns = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 `;
 
 const CarouselPrevBtn = styled.button`
-  position: absolute;
+  /* position: absolute; */
   /* top: 50%; */
   /* transform: translateY(-50%); */
   z-index: 1;
@@ -137,12 +78,14 @@ const CarouselPrevBtn = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  left: 5%;
-  bottom: 0;
+  display: flex;
+  align-items: center;
+  /* left: 5%; */
+  /* bottom: 0; */
 `;
 
 const CarouselNextBtn = styled.button`
-  position: absolute;
+  /* position: absolute; */
   /* top: 50%; */
   /* transform: translateY(-50%); */
   z-index: 1;
@@ -151,8 +94,10 @@ const CarouselNextBtn = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  right: 5%;
-  bottom: 0;
+  display: flex;
+  align-items: center;
+  /* right: 5%; */
+  /* bottom: 0; */
 `;
 
 const Carousel = ({ images }) => {
@@ -173,17 +118,25 @@ const Carousel = ({ images }) => {
 
   return (
     <CarouselContainer className='carousel'>
+      <CarouselBtnContainer>
+        <CarouselBtns>
+          <CarouselPrevBtn onClick={prevImage}>
+            <GrPrevious /> <span style={{ fontSize: '18px' }}>PREV</span>
+          </CarouselPrevBtn>
+        </CarouselBtns>
+      </CarouselBtnContainer>
       <CarouselCarousel>
         <CarouselItem>
           <CarouselImg src={images[currentImageIndex]} alt='carousel image' />
         </CarouselItem>
       </CarouselCarousel>
-      <CarouselPrevBtn onClick={prevImage}>
-        <GrPrevious />
-      </CarouselPrevBtn>
-      <CarouselNextBtn onClick={nextImage}>
-        <GrNext />
-      </CarouselNextBtn>
+      <CarouselBtnContainer>
+        <CarouselBtns>
+          <CarouselNextBtn onClick={nextImage}>
+            <span style={{ fontSize: '18px' }}>NEXT</span> <GrNext />
+          </CarouselNextBtn>
+        </CarouselBtns>
+      </CarouselBtnContainer>
     </CarouselContainer>
   );
 };
