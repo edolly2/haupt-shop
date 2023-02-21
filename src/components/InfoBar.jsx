@@ -14,6 +14,7 @@ const Container = styled.div`
   align-items: center;
   min-height: 3.6rem;
   max-height: 3.6rem;
+  z-index: 2;
 `;
 
 const PhoneLink = styled.a`

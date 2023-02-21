@@ -93,7 +93,7 @@ const MobileNavBar = (props) => {
                 setMenuActive(false);
               }, 50);
             }}
-            to='/'
+            to='/haupt-shop/'
           >
             <NavListItem>Home</NavListItem>
           </NavLink>
@@ -103,7 +103,7 @@ const MobileNavBar = (props) => {
                 setMenuActive(false);
               }, 50);
             }}
-            to='/about'
+            to='/haupt-shop/about'
           >
             <NavListItem>About</NavListItem>
           </NavLink>
@@ -113,7 +113,7 @@ const MobileNavBar = (props) => {
                 setMenuActive(false);
               }, 50);
             }}
-            to='/services'
+            to='/haupt-shop/services'
           >
             <NavListItem>Services</NavListItem>
           </NavLink>
@@ -123,7 +123,7 @@ const MobileNavBar = (props) => {
                 setMenuActive(false);
               }, 50);
             }}
-            to='/gallery'
+            to='/haupt-shop/gallery'
           >
             <NavListItem>Gallery</NavListItem>
           </NavLink>
@@ -133,7 +133,7 @@ const MobileNavBar = (props) => {
                 setMenuActive(false);
               }, 50);
             }}
-            to='/inventory'
+            to='/haupt-shop/inventory'
           >
             <NavListItem>Our Inventory</NavListItem>
           </NavLink>
@@ -143,7 +143,7 @@ const MobileNavBar = (props) => {
                 setMenuActive(false);
               }, 50);
             }}
-            to='/contact'
+            to='/haupt-shop/contact'
           >
             <NavListItem>Contact</NavListItem>
           </NavLink>

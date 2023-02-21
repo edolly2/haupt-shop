@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Carousel from './Carousel';
 
 const Container = styled.div`
   height: 100vh;
@@ -9,7 +10,11 @@ const Container = styled.div`
 `;
 
 const HomeContent = () => {
-  return <Container>HomeContent</Container>;
+  return (
+    <Container>
+      <Carousel />
+    </Container>
+  );
 };
 
 export default HomeContent;

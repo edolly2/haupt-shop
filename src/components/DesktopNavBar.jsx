@@ -71,22 +71,22 @@ const DesktopNavBar = (props) => {
       <NavLogo src={Logo} alt='llll' />
       <Nav>
         <NavList>
-          <NavLink to='/'>
+          <NavLink to='/haupt-shop/'>
             <NavListItem>Home</NavListItem>
           </NavLink>
-          <NavLink to='/about'>
+          <NavLink to='/haupt-shop/about'>
             <NavListItem>About</NavListItem>
           </NavLink>
-          <NavLink to='/services'>
+          <NavLink to='/haupt-shop/services'>
             <NavListItem>Services</NavListItem>
           </NavLink>
-          <NavLink to='/gallery'>
+          <NavLink to='/haupt-shop/gallery'>
             <NavListItem>Gallery</NavListItem>
           </NavLink>
-          <NavLink to='/inventory'>
+          <NavLink to='/haupt-shop/inventory'>
             <NavListItem>Our Inventory</NavListItem>
           </NavLink>
-          <NavLink to='/contact'>
+          <NavLink to='/haupt-shop/contact'>
             <NavListItem>Contact</NavListItem>
           </NavLink>
           <NavLink>

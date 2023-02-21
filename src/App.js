@@ -28,13 +28,13 @@ function App() {
         <QuoteModal style={{ display: quoteBtnClicked ? 'flex' : 'none' }} onModalExitClick={() => { setQuoteBtnClicked(false) }} />
         <Header onQuoteClickMB={() => { setQuoteBtnClicked(true) }} onQuoteClickDT={() => { setQuoteBtnClicked(true) }} />
         <Routes>
-          <Route path='/' exact element={<HomePage />} />
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/services' element={<ServicesPage />} />
-          <Route path='/gallery' element={<GalleryPage />} />
-          <Route path='/inventory' element={<InventoryPage />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='/quote' element={<QuotePage />} />
+          <Route path='/haupt-shop/' exact element={<HomePage />} />
+          <Route path='/haupt-shop/about' element={<AboutPage />} />
+          <Route path='/haupt-shop/services' element={<ServicesPage />} />
+          <Route path='/haupt-shop/gallery' element={<GalleryPage />} />
+          <Route path='/haupt-shop/inventory' element={<InventoryPage />} />
+          <Route path='/haupt-shop/contact' element={<ContactPage />} />
+          <Route path='/haupt-shop/quote' element={<QuotePage />} />
         </Routes>
         <Footer />
       </PageLayout>

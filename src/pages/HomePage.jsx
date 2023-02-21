@@ -8,8 +8,8 @@ const HomePage = () => {
     // <MainLayout>
     <>
       <Hero />
-      <HomeBadges />
       <HomeContent />
+      <HomeBadges />
     </>
     // </MainLayout>
   );
