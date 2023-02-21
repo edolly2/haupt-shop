@@ -11,6 +11,7 @@ const Container = styled.div`
     rgba(0, 0, 0, 1) 0%,
     rgba(33, 33, 33, 1) 100%
   );
+  margin-top: -1px;
 `;
 
 const Layout = styled.div`

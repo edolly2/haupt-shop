@@ -29,6 +29,10 @@ const FooterWrapper = styled.div`
   justify-content: space-between;
   padding: 36px;
   align-items: flex-start;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 36px;
+  }
 `;
 
 const FooterSection = styled.div`
@@ -41,8 +45,10 @@ const FooterSection = styled.div`
 
 const FooterLogo = styled.img`
   width: 10vw;
+  min-width: 200px;
   height: auto;
   /* margin-bottom: 2.4rem; */
+  /* @media screen and (max-width: 768px) { */
 `;
 
 const FooterBottom = styled.div`
