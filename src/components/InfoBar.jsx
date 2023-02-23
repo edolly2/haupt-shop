@@ -15,6 +15,9 @@ const Container = styled.div`
   min-height: 3.6rem;
   max-height: 3.6rem;
   z-index: 2;
+  @media screen and (max-width: 768px) {
+    padding: 2px 24px;
+  }
 `;
 
 const PhoneLink = styled.a`

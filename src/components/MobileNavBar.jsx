@@ -8,8 +8,8 @@ import InfoBar from './InfoBar';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);
-  padding: 36px;
-  margin-top: 36px;
+  padding: 24px;
+  margin-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -30,7 +30,7 @@ const NavList = styled.ul`
   z-index: 2;
   top: 99.5%;
   right: 0;
-  padding: 36px;
+  padding: 24px;
   width: 60vw;
 `;
 const NavListItem = styled.li`

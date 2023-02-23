@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { BsInfoCircle } from 'react-icons/bs';
 import { IoMdClose } from 'react-icons/io';
+import OnlineQuoteInfo from './OnlineQuoteInfo';
+import { useState } from 'react';
+import InPersonQuoteInfo from './InPersonQuoteInfo';
 
 const Container = styled.div`
   position: relative;
@@ -51,8 +54,12 @@ const ExitBtn = styled.div`
 `;
 
 const QuoteModal = (props) => {
+  const [onlineInfoActive, setOnlineInfoActive] = useState(false);
+  const [inPersonInfoActive, setInPersonInfoActive] = useState(false);
+
   return (
     <Container style={props.style}>
+      <OnlineQuoteInfo />
       <ExitBtn>
         <IoMdClose
           className='icon exit-icon'
@@ -62,14 +69,33 @@ const QuoteModal = (props) => {
       <OptionWrapper>
         <p>
           Request a Quote Online{'  '}
-          <BsInfoCircle className='info-icon' />
+          <BsInfoCircle
+            className='info-icon'
+            onClick={() => {
+              setOnlineInfoActive(!onlineInfoActive);
+              setInPersonInfoActive(false);
+            }}
+          />
+          <OnlineQuoteInfo
+            style={{ display: onlineInfoActive ? 'flex' : 'none' }}
+          />
+          <InPersonQuoteInfo
+            style={{ display: inPersonInfoActive ? 'flex' : 'none' }}
+          />
         </p>
         <OptionBtn>Start</OptionBtn>
       </OptionWrapper>
       <OptionWrapper>
         <p>
           Schedule an In-Person Visit{'  '}
-          <BsInfoCircle className='info-icon' />
+          <BsInfoCircle
+            className='info-icon'
+            onClick={() => {
+              setOnlineInfoActive(false);
+              setInPersonInfoActive(!inPersonInfoActive);
+            }}
+          />
+          ;
         </p>
         <OptionBtn>Schedule Visit</OptionBtn>
       </OptionWrapper>

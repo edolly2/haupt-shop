@@ -29,9 +29,10 @@ const FooterWrapper = styled.div`
   justify-content: space-between;
   padding: 36px;
   align-items: flex-start;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
     gap: 36px;
+    padding: 24px;
   }
 `;
 
@@ -58,11 +59,19 @@ const FooterBottom = styled.div`
   padding: 2px 0 2px 36px;
   font-size: 0.7rem;
   margin: 0;
+  @media screen and (max-width: 768px) {
+    padding: 2px 0 2px 24px;
+  }
 `;
 
 const LeftCol = styled.div``;
 
-const FooterGrp = styled.div``;
+const FooterGrp = styled.div`
+  padding: 0 32px;
+  @media screen and (max-width: 768px) {
+    padding: 0 24px;
+  }
+`;
 
 const PhoneLink = styled.a`
   /* color: #b8cad2; */
@@ -91,7 +100,7 @@ const Line = styled.div`
   background-color: #011638;
   /* margin: 36px 0; */
   /* border-radius: 100%; */
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -99,20 +108,27 @@ const Line = styled.div`
 const HoursSection = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  @media screen and (max-width: 768px) {
+    /* width: 100%; */
+  }
 `;
 
 const HoursGrp = styled.div`
   display: flex;
   /* gap: 1.6rem; */
   justify-content: space-between;
+  border-bottom: 2px solid #011638;
+  max-width: 200px;
 `;
 
 const Day = styled.p`
   color: pink;
+  margin-right: 32px;
 `;
 const Time = styled.p`
   color: green;
+  /* margin-left: auto; */
+  /* text-align: right; */
 `;
 
 const Footer = () => {

@@ -12,6 +12,9 @@ const Container = styled.div`
     rgba(33, 33, 33, 1) 100%
   );
   margin-top: -1px;
+  @media screen and (max-width: 768px) {
+    padding: 8px;
+  }
 `;
 
 const Layout = styled.div`
@@ -42,6 +45,10 @@ const Layout = styled.div`
   );
   padding: 16px;
   min-height: 75vh;
+
+  @media screen and (max-width: 768px) {
+    padding: 8px;
+  }
 `;
 
 const MainLayout = ({ children }) => {

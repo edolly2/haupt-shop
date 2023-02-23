@@ -12,6 +12,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    padding: 60px 24px;
+  }
 `;
 
 const BadgeContainer = styled.div`
