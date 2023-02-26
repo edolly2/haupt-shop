@@ -68,7 +68,9 @@ const DesktopNavBar = (props) => {
   return (
     <Container>
       <InfoBar />
-      <NavLogo src={Logo} alt='llll' />
+      <NavLink to='/haupt-shop/'>
+        <NavLogo src={Logo} alt='llll' />
+      </NavLink>
       <Nav>
         <NavList>
           <NavLink to='/haupt-shop/'>

@@ -92,24 +92,19 @@ const HomeBadges = () => {
         <BadgeWrapper>
           <BadgeImg src={Badge1} alt='#' />
           {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            tempore nisi omnis mollitia. Ratione voluptatum corrupti iusto
-            veniam sequi sapiente dignissimos accusantium sed fugiat facilis.
+            The Haupt Shop will never sell you a car that does not meet your needs and standards. We believe in offering the fairest price possible and strive to have you leaving the shop with the confidence that you deserve.
           </p> */}
         </BadgeWrapper>
         <BadgeWrapper>
           <BadgeImg src={Badge2} alt='#' />
           {/* <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-            reprehenderit. Laboriosam ea rem explicabo consectetur.
+            Here at the Haupt Shop, we take our customer care seriously. We love to build lasting relationships with our customers and treat every interaction with the professionalism, transparency, and with the quality service necessary to earn your trust.
           </p> */}
         </BadgeWrapper>
         <BadgeWrapper>
           <BadgeImg src={Badge3} alt='#' />
           {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            delectus cupiditate vero, provident reiciendis porro maxime quae.
-            Cupiditate, aliquam hic.
+            Our highly skilled technicians will effectively  analyze, troubleshoot, and diagnose any vehicle issues that may arise. Safely getting you back on the road as quickly as possible, all at an honest price.
           </p> */}
         </BadgeWrapper>
       </BadgeContainer>

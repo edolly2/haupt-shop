@@ -69,7 +69,9 @@ const MobileNavBar = (props) => {
   return (
     <Container>
       <InfoBar />
-      <NavLogo src={Logo} alt='llll' />
+      <NavLink to='/haupt-shop/'>
+        <NavLogo src={Logo} alt='llll' />
+      </NavLink>
       <Nav>
         <HiOutlineMenuAlt3
           className='icon hamburger-icon'

@@ -4,6 +4,7 @@ import { IoMdClose } from 'react-icons/io';
 import OnlineQuoteInfo from './OnlineQuoteInfo';
 import { useState } from 'react';
 import InPersonQuoteInfo from './InPersonQuoteInfo';
+import QuoteInfoWindow from './QuoteInfoWindow';
 
 const Container = styled.div`
   position: relative;
@@ -59,7 +60,26 @@ const QuoteModal = (props) => {
 
   return (
     <Container style={props.style}>
-      <OnlineQuoteInfo />
+      <QuoteInfoWindow
+        quoteInfoWindowExit={() => {
+          setInPersonInfoActive(false);
+          setOnlineInfoActive(false);
+        }}
+        infoWindowStyle={{
+          display:
+            onlineInfoActive ||
+            // ? 'flex'
+
+            inPersonInfoActive
+              ? 'flex'
+              : 'none',
+        }}
+        onlineInfoStyle={{ display: onlineInfoActive ? 'flex' : 'none' }}
+        inPersonInfoStyle={{
+          display: inPersonInfoActive ? 'flex' : 'none',
+        }}
+      />
+      {/* <OnlineQuoteInfo /> */}
       <ExitBtn>
         <IoMdClose
           className='icon exit-icon'
@@ -72,16 +92,16 @@ const QuoteModal = (props) => {
           <BsInfoCircle
             className='info-icon'
             onClick={() => {
-              setOnlineInfoActive(!onlineInfoActive);
               setInPersonInfoActive(false);
+              setOnlineInfoActive(true);
             }}
           />
-          <OnlineQuoteInfo
+          {/* <OnlineQuoteInfo
             style={{ display: onlineInfoActive ? 'flex' : 'none' }}
           />
           <InPersonQuoteInfo
             style={{ display: inPersonInfoActive ? 'flex' : 'none' }}
-          />
+          /> */}
         </p>
         <OptionBtn>Start</OptionBtn>
       </OptionWrapper>
@@ -92,10 +112,9 @@ const QuoteModal = (props) => {
             className='info-icon'
             onClick={() => {
               setOnlineInfoActive(false);
-              setInPersonInfoActive(!inPersonInfoActive);
+              setInPersonInfoActive(true);
             }}
           />
-          ;
         </p>
         <OptionBtn>Schedule Visit</OptionBtn>
       </OptionWrapper>

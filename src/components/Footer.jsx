@@ -6,7 +6,7 @@ import {
   FaYoutube,
   FaInstagram,
 } from 'react-icons/fa';
-import { FiMapPin } from 'react-icons/fi';
+import { NavLink } from 'react-router-dom';
 
 const PageFooter = styled.footer`
   /* position: relative; */
@@ -136,7 +136,9 @@ const Footer = () => {
     <PageFooter>
       <FooterWrapper>
         <FooterSection>
-          <FooterLogo src={Logo} alt='llll' />
+          <NavLink to='/haupt-shop/'>
+            <FooterLogo src={Logo} alt='llll' />
+          </NavLink>
           <FooterGrp>
             <FooterHeading>Phone</FooterHeading>
             <Line />
