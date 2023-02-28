@@ -21,6 +21,9 @@ const PageSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media screen and (max-width: 768px) {
+    width: 75%;
+  }
 `;
 
 const InfoP = styled.p`
