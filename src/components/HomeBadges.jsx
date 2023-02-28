@@ -7,7 +7,7 @@ const Container = styled.div`
   min-height: 50vh;
   /* width: 100%; */
   background-color: #b8cad2;
-  padding: 72px 36px;
+  padding: 72px 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +64,7 @@ const Line = styled.div`
   width: 70%;
   height: 4px;
   background-color: #011638;
-  margin: 36px 0;
+  margin: 32px 0;
   border-radius: 100%;
   @media screen and (max-width: 769px) {
     width: 100%;
@@ -75,7 +75,7 @@ const SmallLine = styled.div`
   width: 70%;
   height: 4px;
   background-color: #011638;
-  margin: 36px 0;
+  margin: 32px 0;
   border-radius: 100%;
   width: 50%;
   @media screen and (max-width: 769px) {

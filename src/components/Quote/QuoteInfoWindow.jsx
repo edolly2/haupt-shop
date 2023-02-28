@@ -23,7 +23,7 @@ const Container = styled.div`
 
   /* justify-content: center; */
   align-items: center;
-  padding: 36px;
+  padding: 32px;
   z-index: 5;
 `;
 

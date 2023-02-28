@@ -150,6 +150,10 @@ button,
   font-weight: 300;
 }
 
+textarea {
+  resize: none;
+}
+
 .icon {
   font-size: 32px;
 }
@@ -170,12 +174,14 @@ button,
 }
 
 .info-icon,
-.exit-icon {
+.exit-icon,
+.icon {
   color: #b8cad2;
 }
 
 .info-icon:hover,
-.exit-icon:hover {
+.exit-icon:hover,
+.icon:hover {
   cursor: pointer;
   color: #005cf0;
   transform: scale(1.1);
@@ -201,4 +207,8 @@ button,
 
 .link-hover:hover {
   color: #b8cad2;
+}
+
+.invalid-feedback {
+  color: red;
 }

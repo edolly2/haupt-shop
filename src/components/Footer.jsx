@@ -27,11 +27,11 @@ const PageFooter = styled.footer`
 const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 36px;
+  padding: 32px;
   align-items: flex-start;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
-    gap: 36px;
+    gap: 32px;
     padding: 24px;
   }
 `;
@@ -56,7 +56,7 @@ const FooterBottom = styled.div`
   display: flex;
   gap: 2.4rem;
   background-color: rgb(0, 0, 0);
-  padding: 2px 0 2px 36px;
+  padding: 2px 0 2px 32px;
   font-size: 0.7rem;
   margin: 0;
   @media screen and (max-width: 768px) {
