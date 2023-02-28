@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import Logo from '../assets/images/haupt-shop.png';
+import Logo from '../../assets/images/haupt-shop.png';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { CgClose } from 'react-icons/cg';
 import { useState } from 'react';
-import InfoBar from './InfoBar';
+import InfoBar from '../InfoBar';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);

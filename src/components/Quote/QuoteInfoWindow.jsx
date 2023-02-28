@@ -5,6 +5,7 @@ import OnlineQuoteInfo from './OnlineQuoteInfo';
 
 const Container = styled.div`
   position: absolute;
+  border-radius: 0.4rem;
   /* top: ; */
   /* right: 0; */
   /* width: 400px; */
@@ -18,6 +19,8 @@ const Container = styled.div`
   background-color: pink;
   display: none;
   flex-direction: column;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+
   /* justify-content: center; */
   align-items: center;
   padding: 36px;

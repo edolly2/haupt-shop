@@ -1,17 +1,17 @@
 import './App.css';
 import PageLayout from './layout/PageLayout';
 import { Route, Routes } from 'react-router-dom'
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ServicesPage from './pages/ServicesPage';
-import ContactPage from './pages/ContactPage';
-import InventoryPage from './pages/InventoryPage';
-import QuotePage from './pages/QuotePage';
-import GalleryPage from './pages/GalleryPage';
+import HomePage from './components/Home/HomePage';
+import AboutPage from './components/About/AboutPage';
+import ServicesPage from './components/Services/ServicesPage';
+import ContactPage from './components/Contact/ContactPage';
+import InventoryPage from './components/Inventory/InventoryPage';
+import QuotePage from './components/Quote/QuotePage';
+import GalleryPage from './components/Gallery/GalleryPage';
 import Footer from './components/Footer';
 // import MobileNavBar from './components/MobileNavBar';
 import Header from './components/Header';
-import QuoteModal from './components/QuoteModal';
+import QuoteModal from './components/Quote/QuoteModal';
 import { useState } from 'react';
 import Overlay from './components/Overlay';
 

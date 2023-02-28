@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import MobileNavBar from './MobileNavBar';
-import DesktopNavBar from './DesktopNavBar';
+import MobileNavBar from './Navigation/MobileNavBar';
+import DesktopNavBar from './Navigation/DesktopNavBar';
 
 const Container = styled.header`
   /* position: relative; */

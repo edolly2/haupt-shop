@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import Logo from '../assets/images/haupt-shop.png';
-import InfoBar from './InfoBar';
+import Logo from '../../assets/images/haupt-shop.png';
+import InfoBar from '../InfoBar';
 // import { useState } from 'react';
 
 const Container = styled.div`

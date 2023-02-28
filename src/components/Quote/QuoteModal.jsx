@@ -24,6 +24,7 @@ const Container = styled.div`
   background-color: rgb(33, 33, 33);
   border-radius: 0.4rem;
   z-index: 4;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 `;
 
 const OptionWrapper = styled.div`
@@ -110,14 +111,14 @@ const QuoteModal = (props) => {
             style={{ display: inPersonInfoActive ? 'flex' : 'none' }}
           /> */}
         </OptionP>
-        <OptionBtn
-          onClick={props.onlineQuoteBtnClick}
-          // className='link link-hover'
-        >
-          <NavLink to='/haupt-shop/quote' className='link'>
+        <NavLink to='/haupt-shop/quote' className='link'>
+          <OptionBtn
+            onClick={props.onlineQuoteBtnClick}
+            // className='link link-hover'
+          >
             Start
-          </NavLink>
-        </OptionBtn>
+          </OptionBtn>
+        </NavLink>
       </OptionWrapper>
       <OptionWrapper>
         <OptionP>

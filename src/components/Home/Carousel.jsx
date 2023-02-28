@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import Bug from '../assets/images/haupt-bug.jpg';
-import Camaro from '../assets/images/haupt-camaro.jpg';
-import Dodge from '../assets/images/haupt-dodge.jpg';
-import Semi from '../assets/images/haupt-semi.jpg';
-import Redneck from '../assets/images/haupt-redneck.jpg';
+import Bug from '../../assets/images/haupt-bug.jpg';
+import Camaro from '../../assets/images/haupt-camaro.jpg';
+import Dodge from '../../assets/images/haupt-dodge.jpg';
+import Semi from '../../assets/images/haupt-semi.jpg';
+import Redneck from '../../assets/images/haupt-redneck.jpg';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 import { NavLink } from 'react-router-dom';
 

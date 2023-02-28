@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import HeroBack from '../assets/images/haupt-background.png';
+import HeroBack from '../../assets/images/haupt-background.png';
 
 const Container = styled.div`
   /* min-width: 100vw; */
