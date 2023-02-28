@@ -5,9 +5,11 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: none;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 24px;
   align-items: center;
+  height: 100%;
+  text-align: center;
 `;
 
 const OptionBtn = styled.button`
@@ -34,7 +36,14 @@ const InPersonQuoteInfo = (props) => {
   return (
     <Container style={props.style}>
       <Title>Want an In-person Quote?</Title>
-      <div style={{ margin: '16px 0' }}>
+      <div
+        style={{
+          margin: '16px 0',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+        }}
+      >
         <InfoP>
           Press the
           <span style={{ margin: '0 8px' }}>
@@ -42,7 +51,7 @@ const InPersonQuoteInfo = (props) => {
           </span>
           button to use our interactive appointment scheduler
         </InfoP>
-        -OR-
+        <span style={{ fontWeight: '700', fontSize: '20px' }}>-OR-</span>
         <InfoP>
           Feel free to visit our{' '}
           <NavLink to='/haupt-shop/contact'>Contact Page</NavLink> to get in

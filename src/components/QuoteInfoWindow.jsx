@@ -18,9 +18,9 @@ const Container = styled.div`
   background-color: pink;
   display: none;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  padding: 0 36px;
+  padding: 36px;
   z-index: 5;
 `;
 

@@ -28,7 +28,7 @@ const NavList = styled.ul`
   flex-direction: column;
   position: absolute;
   z-index: 2;
-  top: 99.5%;
+  top: 99%;
   right: 0;
   padding: 24px;
   width: 60vw;

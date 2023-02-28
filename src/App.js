@@ -21,11 +21,11 @@ import Overlay from './components/Overlay';
 function App() {
   const [quoteBtnClicked, setQuoteBtnClicked] = useState(false);
   return (
-    <div className="App" style={{ maxHeight: quoteBtnClicked ? '100vh' : null }}>
+    <div className="App" style={{ maxHeight: quoteBtnClicked ? '100vh' : null, overflow: quoteBtnClicked ? 'hidden' : null }}>
 
       <PageLayout>
         <Overlay style={{ display: quoteBtnClicked ? 'flex' : 'none' }} />
-        <QuoteModal style={{ display: quoteBtnClicked ? 'flex' : 'none' }} onModalExitClick={() => { setQuoteBtnClicked(false) }} />
+        <QuoteModal style={{ display: quoteBtnClicked ? 'flex' : 'none' }} onModalExitClick={() => { setQuoteBtnClicked(false) }} onlineQuoteBtnClick={() => { setQuoteBtnClicked(false) }} />
         <Header onQuoteClickMB={() => { setQuoteBtnClicked(true) }} onQuoteClickDT={() => { setQuoteBtnClicked(true) }} />
         <Routes>
           <Route path='/haupt-shop/' exact element={<HomePage />} />

@@ -53,7 +53,13 @@ const Layout = styled.div`
 
 const MainLayout = ({ children }) => {
   return (
-    <Container>
+    <Container
+      onLoad={window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      })}
+    >
       <Layout>
         <main>{children}</main>
       </Layout>

@@ -1,7 +1,12 @@
+import PageTitle from '../components/PageTitle';
 import MainLayout from '../layout/MainLayout';
 
 const GalleryPage = () => {
-  return <MainLayout>GalleryPage</MainLayout>;
+  return (
+    <MainLayout>
+      <PageTitle text='View Our Work' />
+    </MainLayout>
+  );
 };
 
 export default GalleryPage;

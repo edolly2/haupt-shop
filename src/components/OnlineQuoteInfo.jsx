@@ -6,6 +6,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 24px;
+  height: 100%;
 `;
 const Title = styled.h3``;
 const InfoList = styled.ol`

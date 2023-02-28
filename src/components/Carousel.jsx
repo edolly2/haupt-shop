@@ -6,6 +6,7 @@ import Dodge from '../assets/images/haupt-dodge.jpg';
 import Semi from '../assets/images/haupt-semi.jpg';
 import Redneck from '../assets/images/haupt-redneck.jpg';
 import { GrNext, GrPrevious } from 'react-icons/gr';
+import { NavLink } from 'react-router-dom';
 
 const CarouselContainer = styled.div`
   position: relative;
@@ -51,6 +52,8 @@ const CarouselImg = styled.img`
   /* max-height: 70vh; */
   object-fit: cover;
   transform: rotate(-6deg);
+  position: relative;
+  z-index: 1;
 `;
 
 const CarouselBtnContainer = styled.div`
@@ -100,10 +103,55 @@ const CarouselNextBtn = styled.button`
   /* bottom: 0; */
 `;
 
+const ImgOverlay = styled.div`
+  /* background-color: rgba(33, 33, 33, 0.5);
+  backdrop-filter: blur(10px);
+  transform: rotate(-6deg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+  &:hover {
+    cursor: pointer;
+  } */
+  position: absolute;
+  /* top: 0; */
+  /* bottom: 0; */
+  height: 70vh;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-6deg);
+  h2 {
+    text-align: center;
+    display: none;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    h2 {
+      display: block;
+    }
+  }
+`;
+
 const Carousel = ({ images }) => {
   images = [Bug, Dodge, Camaro, Semi, Redneck];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHovering(true);
+  };
   const prevImage = () => {
     const index =
       currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
@@ -127,7 +175,24 @@ const Carousel = ({ images }) => {
       </CarouselBtnContainer>
       <CarouselCarousel>
         <CarouselItem>
-          <CarouselImg src={images[currentImageIndex]} alt='carousel image' />
+          <NavLink className='link' to='/haupt-shop/gallery'>
+            <ImgOverlay
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={{ display: isHovering ? 'flex' : 'none' }}
+            >
+              <h2>View Gallery</h2>
+            </ImgOverlay>
+          </NavLink>
+          <CarouselImg
+            src={images[currentImageIndex]}
+            alt='carousel image'
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          />
+          {/* <NavLink to='/haupt-shop/gallery'>
+            <h3>view g</h3>
+          </NavLink> */}
         </CarouselItem>
       </CarouselCarousel>
       <CarouselBtnContainer>

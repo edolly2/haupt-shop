@@ -101,7 +101,8 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   /* overflow-x: hidden; */
 
@@ -113,7 +114,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'DM Sans', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
 }
 
@@ -137,6 +139,15 @@ body,
 h5,
 li {
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+}
+
+p,
+a,
+li,
+button,
+.link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
 .icon {
@@ -181,4 +192,13 @@ li {
 .footer-icon {
   color: pink;
   font-size: 24px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-hover:hover {
+  color: #b8cad2;
 }

@@ -1,8 +1,10 @@
+import PageTitle from '../components/PageTitle';
 import MainLayout from '../layout/MainLayout';
 
 const ServicesPage = () => {
   return (
     <MainLayout>
+      <PageTitle text='What We Do' />
       <ul>
         <li>Car Sales</li>
         <li>Towing</li>

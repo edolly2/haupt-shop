@@ -5,6 +5,7 @@ import OnlineQuoteInfo from './OnlineQuoteInfo';
 import { useState } from 'react';
 import InPersonQuoteInfo from './InPersonQuoteInfo';
 import QuoteInfoWindow from './QuoteInfoWindow';
+import { NavLink } from 'react-router-dom';
 
 const Container = styled.div`
   position: relative;
@@ -31,6 +32,12 @@ const OptionWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
+`;
+
+const OptionP = styled.p`
+  padding: 0;
+  margin: 0;
+  color: #b8cad2;
 `;
 
 const OptionBtn = styled.button`
@@ -87,7 +94,7 @@ const QuoteModal = (props) => {
         />
       </ExitBtn>
       <OptionWrapper>
-        <p>
+        <OptionP>
           Request a Quote Online{'  '}
           <BsInfoCircle
             className='info-icon'
@@ -102,11 +109,18 @@ const QuoteModal = (props) => {
           <InPersonQuoteInfo
             style={{ display: inPersonInfoActive ? 'flex' : 'none' }}
           /> */}
-        </p>
-        <OptionBtn>Start</OptionBtn>
+        </OptionP>
+        <OptionBtn
+          onClick={props.onlineQuoteBtnClick}
+          // className='link link-hover'
+        >
+          <NavLink to='/haupt-shop/quote' className='link'>
+            Start
+          </NavLink>
+        </OptionBtn>
       </OptionWrapper>
       <OptionWrapper>
-        <p>
+        <OptionP>
           Schedule an In-Person Visit{'  '}
           <BsInfoCircle
             className='info-icon'
@@ -115,7 +129,7 @@ const QuoteModal = (props) => {
               setInPersonInfoActive(true);
             }}
           />
-        </p>
+        </OptionP>
         <OptionBtn>Schedule Visit</OptionBtn>
       </OptionWrapper>
     </Container>
