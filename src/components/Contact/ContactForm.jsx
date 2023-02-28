@@ -29,6 +29,7 @@ const ContactForm = () => {
     } else if (fieldName === 'message') {
       setMessage(fieldValue);
     }
+    // validateForm();
   };
 
   // Form Validation
@@ -63,7 +64,6 @@ const ContactForm = () => {
     }
 
     setErrors(errors);
-    handleInputChange();
     return isValid;
   };
 
@@ -107,7 +107,7 @@ const ContactForm = () => {
         id='name'
         name='name'
         value={name}
-        onChange={() => validateForm()}
+        onChange={handleInputChange}
         // required
       />
       <div className='invalid-feedback'>{errors['name']}</div>
