@@ -4,7 +4,6 @@ import HeroBack from '../../assets/images/haupt-background.png';
 const Container = styled.div`
   /* min-width: 100vw; */
   min-height: 60vh;
-  /* max-width: 100vw; */
   max-height: 60vh;
   margin-top: -1px;
   background-image: url(${HeroBack});
@@ -12,6 +11,9 @@ const Container = styled.div`
   background-size: cover;
   display: flex;
   justify-content: flex-end;
+  @media screen and (max-width: 768px) {
+    min-height: 25vh;
+  }
 `;
 
 const HeroContent = styled.div`
