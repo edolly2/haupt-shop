@@ -5,7 +5,11 @@ const Title = styled.h1`
 `;
 
 const PageTitle = (props) => {
-  return <Title text={props.text}>{props.text}</Title>;
+  return (
+    <Title style={props.style} text={props.text}>
+      {props.text}
+    </Title>
+  );
 };
 
 export default PageTitle;

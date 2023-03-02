@@ -38,6 +38,7 @@ const QuoteInfoWindow = (props) => {
     <Container style={props.infoWindowStyle}>
       <ExitBtn>
         <IoMdClose
+          style={{ position: 'relative' }}
           className='icon exit-icon'
           onClick={props.quoteInfoWindowExit}
         />
