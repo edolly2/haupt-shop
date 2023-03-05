@@ -22,6 +22,7 @@ const PageFooter = styled.footer`
   flex-direction: column;
   /* box-shadow: inset 0 6px 10px black; */
   /* padding: 2.4rem 4.8rem 0 4.8rem; */
+  margin-top: -1px;
 `;
 
 const FooterWrapper = styled.div`
