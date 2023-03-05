@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4.8rem;
+  /* gap: 4.8rem; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +33,7 @@ const OptionWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
+  padding: 16px 0;
 `;
 
 const OptionP = styled.p`
@@ -56,10 +57,30 @@ const OptionBtn = styled.button`
   }
 `;
 
+const ExitBtnWrapper = styled.div`
+  width: 100%;
+  /* padding: 0.8%; */
+  display: flex;
+  justify-content: flex-end;
+`;
+
 const ExitBtn = styled.div`
-  position: absolute;
+  /* position: absolute;
   top: 0.8rem;
-  right: 0.8rem;
+  right: 0.8rem; */
+  margin: -16px -16px 0 0;
+`;
+
+const Line = styled.div`
+  width: 50%;
+  margin: 16px 0;
+  height: 2px;
+  background-color: white;
+  /* margin: 36px 0; */
+  /* border-radius: 100%; */
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const QuoteModal = (props) => {
@@ -88,12 +109,14 @@ const QuoteModal = (props) => {
         }}
       />
       {/* <OnlineQuoteInfo /> */}
-      <ExitBtn>
-        <IoMdClose
-          className='icon exit-icon'
-          onClick={props.onModalExitClick}
-        />
-      </ExitBtn>
+      <ExitBtnWrapper>
+        <ExitBtn>
+          <IoMdClose
+            className='icon exit-icon'
+            onClick={props.onModalExitClick}
+          />
+        </ExitBtn>
+      </ExitBtnWrapper>
       <OptionWrapper>
         <OptionP>
           Request a Quote Online{'  '}
@@ -120,6 +143,7 @@ const QuoteModal = (props) => {
           </OptionBtn>
         </NavLink>
       </OptionWrapper>
+      <Line />
       <OptionWrapper>
         <OptionP>
           Schedule an In-Person Visit{'  '}

@@ -12,7 +12,7 @@ const PageOverlay = styled.div`
 `;
 
 const Overlay = (props) => {
-  return <PageOverlay style={props.style}>Overlay</PageOverlay>;
+  return <PageOverlay style={props.style}></PageOverlay>;
 };
 
 export default Overlay;
