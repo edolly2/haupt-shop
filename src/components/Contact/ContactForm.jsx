@@ -21,19 +21,29 @@ const FormGroup = styled.div`
 `;
 
 const Label = styled.label`
-  color: white;
   font-size: 1.8rem;
+  color: #b8cad2;
 `;
 
 const Input = styled.input`
   border-radius: 0.4rem;
-  padding: 2px 0 2px 8px;
+  padding: 4px 0 4px 8px;
+  color: rgb(20, 20, 20);
   /* width: 100%; */
+  &:focus {
+    background-color: #b8cad2;
+    box-shadow: inset 0px 0px 2px #005cf0;
+  }
 `;
 
 const TextArea = styled.textarea`
   border-radius: 0.4rem;
   padding: 8px 0 8px 8px;
+  color: rgb(20, 20, 20);
+  &:focus {
+    background-color: #b8cad2;
+    box-shadow: inset 0px 0px 4px #005cf0;
+  }
 `;
 
 const ContactBtn = styled.button`
@@ -189,6 +199,7 @@ const ContactForm = () => {
           type='text'
           id='name'
           name='name'
+          placeholder='John Doe'
           value={name}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
@@ -207,6 +218,7 @@ const ContactForm = () => {
           type='email'
           id='email'
           name='email'
+          placeholder='Example@email.com'
           value={email}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
@@ -227,6 +239,7 @@ const ContactForm = () => {
         <TextArea
           id='message'
           name='message'
+          placeholder='Your feedback is important to us...'
           value={message}
           onChange={handleInputChange}
           onBlur={handleInputBlur}

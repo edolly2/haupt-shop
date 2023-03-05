@@ -8,7 +8,7 @@ import ContactPage from './components/Contact/ContactPage';
 import InventoryPage from './components/Inventory/InventoryPage';
 import QuotePage from './components/Quote/QuotePage';
 import GalleryPage from './components/Gallery/GalleryPage';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 // import MobileNavBar from './components/MobileNavBar';
 import Header from './components/Header';
 import QuoteModal from './components/Quote/QuoteModal';

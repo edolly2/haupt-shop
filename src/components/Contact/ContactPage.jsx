@@ -22,7 +22,7 @@ const PageSection = styled.div`
   flex-direction: column;
   align-items: flex-start;
   @media screen and (max-width: 768px) {
-    width: 75%;
+    width: 100%;
   }
 `;
 
@@ -38,6 +38,7 @@ const SectionTitle = styled.h3`
   white-space: nowrap;
   @media screen and (max-width: 768px) {
     width: 100%;
+    margin: 48px 0 16px 0;
   }
 `;
 
@@ -49,7 +50,7 @@ const SocialContainer = styled.div`
 const ContactPage = () => {
   return (
     <MainLayout>
-      <PageTitle text='Contact The Shop' />
+      <PageTitle text='Get In Touch' />
       <Container>
         <PageSection>
           <SectionTitle>Our Location</SectionTitle>

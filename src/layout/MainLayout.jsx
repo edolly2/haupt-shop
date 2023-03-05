@@ -47,7 +47,7 @@ const Layout = styled.div`
   min-height: 75vh;
 
   @media screen and (max-width: 768px) {
-    padding: 24px 24px 88px 24px;
+    padding: 16px 16px 80px 16px;
   }
 `;
 
