@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import MainLayoutBack from '../assets/images/lifts.jpg';
 
 const Container = styled.div`
-  padding: 0 24px;
+  padding: 24px;
   background-color: rgb(33, 33, 33);
   min-height: 75vh;
   background: rgb(0, 0, 0);
@@ -43,11 +43,11 @@ const Layout = styled.div`
     rgba(40, 40, 40, 1) 50%,
     rgba(0, 0, 0, 1) 100%
   );
-  padding: 24px 24px 96px 24px;
+  padding: 32px 32px 96px 32px;
   min-height: 75vh;
 
   @media screen and (max-width: 768px) {
-    padding: 8px;
+    padding: 24px 24px 88px 24px;
   }
 `;
 

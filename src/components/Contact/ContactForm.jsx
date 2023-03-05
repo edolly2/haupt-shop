@@ -6,10 +6,10 @@ import styled from 'styled-components';
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  /* gap: 8px; */
   width: 75%;
   @media screen and (max-width: 768px) {
-    width: 50%;
+    width: 100%;
   }
   /* align-items: center; */
 `;
