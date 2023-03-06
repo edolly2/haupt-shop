@@ -68,9 +68,9 @@ const FooterBottom = styled.div`
 const LeftCol = styled.div``;
 
 const FooterGrp = styled.div`
-  padding: 0 32px;
+  /* padding: 0 32px; */
   @media screen and (max-width: 768px) {
-    padding: 0 24px;
+    /* padding: 0 24px; */
   }
 `;
 
