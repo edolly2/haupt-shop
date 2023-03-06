@@ -37,7 +37,9 @@ const InventoryCard = ({ car }) => {
       <CardContent>
         <ContentLabel>Description:</ContentLabel> {car.description}
       </CardContent>
-      <CardContent>{car.contact}</CardContent>
+      <CardContent>
+        <button>{car.contact}</button>
+      </CardContent>
     </Card>
   );
 };
