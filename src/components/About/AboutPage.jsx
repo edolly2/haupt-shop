@@ -1,12 +1,17 @@
 import PageTitle from '../PageTitle';
 import MainLayout from '../../layout/MainLayout';
+import styled from 'styled-components';
+
+const SectionTitle = styled.h2`
+  color: #005cf0;
+`;
 const AboutPage = () => {
   return (
     <MainLayout>
       <PageTitle text='About Us' />
-      <h2>Our Story</h2>
-      <h2>Meet The Team</h2>
-      <h2>Mission Statement</h2>
+      <SectionTitle>Our Story</SectionTitle>
+      <SectionTitle>Meet The Team</SectionTitle>
+      <SectionTitle>Mission Statement</SectionTitle>
     </MainLayout>
   );
 };
