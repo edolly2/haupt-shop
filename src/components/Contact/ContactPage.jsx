@@ -21,6 +21,7 @@ const PageSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -31,14 +32,14 @@ const InfoP = styled.p`
 `;
 
 const SectionTitle = styled.h3`
-  margin: 64px 0 32px 0;
+  margin: 0 0 32px 0;
   color: #005cf0;
   border-bottom: 2px solid white;
   width: 75%;
   white-space: nowrap;
   @media screen and (max-width: 768px) {
     width: 100%;
-    margin: 48px 0 16px 0;
+    margin: 0 0 16px 0;
   }
 `;
 

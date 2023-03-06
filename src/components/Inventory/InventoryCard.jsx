@@ -1,16 +1,44 @@
+import styled from 'styled-components';
+
+const Card = styled.div`
+  color: #b8cad2;
+  max-width: 40rem;
+  margin: 48px 0;
+`;
+
+const CardImg = styled.img``;
+
+const CardTitle = styled.h2`
+  color: #005cf0;
+`;
+
+const CardContent = styled.p``;
+
+const ContentLabel = styled.span`
+  color: #005cf0;
+`;
+
 const InventoryCard = ({ car }) => {
   return (
-    <div>
-      <img src={car.image} alt={`${car.year} ${car.make} ${car.model}`} />
-      <h2>
+    <Card>
+      <CardImg src={car.image} alt={`${car.year} ${car.make} ${car.model}`} />
+      <CardTitle>
         {car.make} {car.model}
-      </h2>
-      <p>{car.year}</p>
-      <p>{car.mileage}</p>
-      <p>{car.price}</p>
-      <p>{car.description}</p>
-      <p>{car.contact}</p>
-    </div>
+      </CardTitle>
+      <CardContent>
+        <ContentLabel>Year:</ContentLabel> {car.year}
+      </CardContent>
+      <CardContent>
+        <ContentLabel>Mileage:</ContentLabel> {car.mileage}
+      </CardContent>
+      <CardContent>
+        <ContentLabel>Price:</ContentLabel> {car.price}
+      </CardContent>
+      <CardContent>
+        <ContentLabel>Description:</ContentLabel> {car.description}
+      </CardContent>
+      <CardContent>{car.contact}</CardContent>
+    </Card>
   );
 };
 
