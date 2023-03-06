@@ -54,6 +54,11 @@ const CarouselImg = styled.img`
   transform: rotate(-6deg);
   position: relative;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    /* height: auto; */
+    height: 237px;
+  }
 `;
 
 const CarouselBtnContainer = styled.div`
