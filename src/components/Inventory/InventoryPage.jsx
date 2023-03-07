@@ -6,14 +6,18 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  /* display: flex; */
-  /* display: e; */
-  /* grid-template-columns: repeat(4, 1fr); */
-  /* grid-template-rows: repeat(4, 1fr); */
-`;
-
-const CardWrapper = styled.div`
-  /* grid-column: 2 / 3; */
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const InventoryPage = () => {
@@ -24,11 +28,9 @@ const InventoryPage = () => {
       <PageTitle text='Our Inventory' />
 
       <Container>
-        <CardWrapper>
-          {cars.map((car) => (
-            <InventoryCard key={car.id} car={car} />
-          ))}
-        </CardWrapper>
+        {cars.map((car) => (
+          <InventoryCard key={car.id} car={car} />
+        ))}
       </Container>
       {/* Filter Option */}
       {/* Sort Option */}

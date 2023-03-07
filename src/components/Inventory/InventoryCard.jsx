@@ -53,9 +53,9 @@ const InventoryCard = ({ car }) => {
       <CardContent>
         <ContentLabel>Price:</ContentLabel> {car.price}
       </CardContent>
-      <CardContent>
-        <ContentLabel>Description:</ContentLabel> {car.description}
-      </CardContent>
+      {/* <CardContent> */}
+      {/* <ContentLabel>Description:</ContentLabel> {car.description} */}
+      {/* </CardContent> */}
       <CardContent>
         <InventoryBtn>
           <BsTelephone /> {car.contact}

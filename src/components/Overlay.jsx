@@ -6,7 +6,7 @@ const PageOverlay = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   z-index: 3;
 `;

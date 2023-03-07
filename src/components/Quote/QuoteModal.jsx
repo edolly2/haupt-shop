@@ -21,7 +21,8 @@ const Container = styled.div`
   transform: translate(-50%, -50%);
   min-width: 50vw;
   min-height: 25vh;
-  background-color: rgb(33, 33, 33);
+  background-color: rgba(33, 33, 33, 0.5);
+  backdrop-filter: blur(10px);
   border-radius: 0.4rem;
   z-index: 4;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
@@ -75,7 +76,7 @@ const Line = styled.div`
   width: 50%;
   margin: 16px 0;
   height: 2px;
-  background-color: white;
+  background-color: #b8cad2;
   /* margin: 36px 0; */
   /* border-radius: 100%; */
   @media screen and (max-width: 768px) {
@@ -109,7 +110,12 @@ const QuoteModal = (props) => {
         }}
       />
       {/* <OnlineQuoteInfo /> */}
-      <ExitBtnWrapper>
+      <ExitBtnWrapper
+        style={{
+          visibility:
+            onlineInfoActive || inPersonInfoActive ? 'hidden' : 'visible',
+        }}
+      >
         <ExitBtn>
           <IoMdClose
             className='icon exit-icon'

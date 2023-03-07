@@ -16,10 +16,14 @@ const Container = styled.div`
   /* bottom: -10%; */
   min-width: 140%;
   min-height: 140%;
-  background-color: pink;
+  background-color: rgba(33, 33, 33, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 0.4rem;
+  /* z-index: 4; */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  color: #b8cad2;
   display: none;
   flex-direction: column;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 
   /* justify-content: center; */
   align-items: center;
