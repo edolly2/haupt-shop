@@ -14,7 +14,7 @@ const Container = styled.div`
   padding: 36px;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   /* align-items: center; */
   background-color: rgb(33, 33, 33);
   @media screen and (max-width: 920px) {
@@ -41,9 +41,9 @@ const HeroContentContainer = styled.div`
   /* max-width: 35%; */
   margin-top: 10.4rem;
   /* margin-top: 20%; */
-  background-color: rgba(255, 255, 255, 0.01);
-  backdrop-filter: blur(10px);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.01); */
+  /* backdrop-filter: blur(10px); */
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); */
 
   /* background-color: transparent; */
   color: #b8cad2;
@@ -59,7 +59,7 @@ const HeroContentContainer = styled.div`
   max-height: 25vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   /* margin: auto; */
   /* @media screen and (); */
@@ -76,9 +76,11 @@ const HeroContentContainer = styled.div`
 
 const HeroContentText = styled.h1`
   /* margin-top: 4.8rem; */
-  /* font-weight: 300; */
-  font-size: calc(30px + (42 - 30) * ((100vw - 360px) / (1500 - 360)));
+  font-weight: 100;
 
+  font-size: calc(30px + (72 - 30) * ((100vw - 360px) / (1500 - 360)));
+  font-family: 'Devonshire', cursive;
+  color: #eaee00;
   text-shadow: -4px -4px 0 #011638, 4px -4px 0 #011638, -4px 4px 0 #011638,
     4px 4px 0 #011638, 0 -4px 0 #011638, -4px 0 0 #011638, 4px 0 0 #011638,
     0 4px 0 #011638, 1px -4px 0 #011638, -4px 1px 0 #011638, 4px 1px 0 #011638,
@@ -88,21 +90,59 @@ const HeroContentText = styled.h1`
     2px -4px 0 #011638, -4px 2px 0 #011638, 4px 2px 0 #011638, 2px 4px 0 #011638,
     -3px -4px 0 #011638, -4px -3px 0 #011638, 4px -3px 0 #011638,
     -3px 4px 0 #011638, 3px -4px 0 #011638, -4px 3px 0 #011638,
-    4px 3px 0 #011638, 3px 4px 0 #011638;
+    4px 3px 0 #011638, 3px 4px 0 #011638, -3px -3px 0 #011638,
+    -3px -3px 0 #011638, 3px -3px 0 #011638, -3px 3px 0 #011638,
+    3px -3px 0 #011638, -3px 3px 0 #011638, 3px 3px 0 #011638, 3px 3px 0 #011638,
+    -3px -2px 0 #011638, -2px -3px 0 #011638, 2px -3px 0 #011638,
+    -3px 2px 0 #011638, 3px -2px 0 #011638, -2px 3px 0 #011638,
+    2px 3px 0 #011638, 3px 2px 0 #011638, -3px -1px 0 #011638,
+    -1px -3px 0 #011638, 1px -3px 0 #011638, -3px 1px 0 #011638,
+    3px -1px 0 #011638, -1px 3px 0 #011638, 1px 3px 0 #011638, 3px 1px 0 #011638,
+    -2px -4px 0 #011638, -4px -2px 0 #011638, 4px -2px 0 #011638,
+    -2px 4px 0 #011638, 2px -4px 0 #011638, -4px 2px 0 #011638,
+    4px 2px 0 #011638, 2px 4px 0 #011638, -2px -3px 0 #011638,
+    -3px -2px 0 #011638, 3px -2px 0 #011638, -2px 3px 0 #011638,
+    2px -3px 0 #011638, -3px 2px 0 #011638, 3px 2px 0 #011638, 2px 3px 0 #011638,
+    -2px -2px 0 #011638, -2px -2px 0 #011638, 2px -2px 0 #011638,
+    -2px 2px 0 #011638, 2px -2px 0 #011638, -2px 2px 0 #011638,
+    2px 2px 0 #011638, 2px 2px 0 #011638, -2px -1px 0 #011638,
+    -1px -2px 0 #011638, 1px -2px 0 #011638, -2px 1px 0 #011638,
+    2px -1px 0 #011638, -1px 2px 0 #011638, 1px 2px 0 #011638, 2px 1px 0 #011638;
 `;
 
 const HeroContentSubText = styled.h2`
   color: #011638;
-  /* text-shadow: -4px -4px 0 #b8cad2, 4px -4px 0 #b8cad2, -4px 4px 0 #b8cad2,
-    4px 4px 0 #b8cad2, 0 -4px 0 #b8cad2, -4px 0 0 #b8cad2, 4px 0 0 #b8cad2,
-    0 4px 0 #b8cad2, 1px -4px 0 #b8cad2, -4px 1px 0 #b8cad2, 4px 1px 0 #b8cad2,
-    1px 4px 0 #b8cad2, -1px -4px 0 #b8cad2, -4px -1px 0 #b8cad2,
-    4px -1px 0 #b8cad2, -1px 4px 0 #b8cad2, -2px -4px 0 #b8cad2,
-    -4px -2px 0 #b8cad2, 4px -2px 0 #b8cad2, -2px 4px 0 #b8cad2,
-    2px -4px 0 #b8cad2, -4px 2px 0 #b8cad2, 4px 2px 0 #b8cad2, 2px 4px 0 #b8cad2,
-    -3px -4px 0 #b8cad2, -4px -3px 0 #b8cad2, 4px -3px 0 #b8cad2,
-    -3px 4px 0 #b8cad2, 3px -4px 0 #b8cad2, -4px 3px 0 #b8cad2,
-    4px 3px 0 #b8cad2, 3px 4px 0 #b8cad2; */
+  font-weight: 100;
+  text-align: right;
+  font-family: 'Devonshire', cursive;
+  color: #eaee00;
+  text-shadow: -4px -4px 0 #011638, 4px -4px 0 #011638, -4px 4px 0 #011638,
+    4px 4px 0 #011638, 0 -4px 0 #011638, -4px 0 0 #011638, 4px 0 0 #011638,
+    0 4px 0 #011638, 1px -4px 0 #011638, -4px 1px 0 #011638, 4px 1px 0 #011638,
+    1px 4px 0 #011638, -1px -4px 0 #011638, -4px -1px 0 #011638,
+    4px -1px 0 #011638, -1px 4px 0 #011638, -2px -4px 0 #011638,
+    -4px -2px 0 #011638, 4px -2px 0 #011638, -2px 4px 0 #011638,
+    2px -4px 0 #011638, -4px 2px 0 #011638, 4px 2px 0 #011638, 2px 4px 0 #011638,
+    -3px -4px 0 #011638, -4px -3px 0 #011638, 4px -3px 0 #011638,
+    -3px 4px 0 #011638, 3px -4px 0 #011638, -4px 3px 0 #011638,
+    4px 3px 0 #011638, 3px 4px 0 #011638, -3px -3px 0 #011638,
+    -3px -3px 0 #011638, 3px -3px 0 #011638, -3px 3px 0 #011638,
+    3px -3px 0 #011638, -3px 3px 0 #011638, 3px 3px 0 #011638, 3px 3px 0 #011638,
+    -3px -2px 0 #011638, -2px -3px 0 #011638, 2px -3px 0 #011638,
+    -3px 2px 0 #011638, 3px -2px 0 #011638, -2px 3px 0 #011638,
+    2px 3px 0 #011638, 3px 2px 0 #011638, -3px -1px 0 #011638,
+    -1px -3px 0 #011638, 1px -3px 0 #011638, -3px 1px 0 #011638,
+    3px -1px 0 #011638, -1px 3px 0 #011638, 1px 3px 0 #011638, 3px 1px 0 #011638,
+    -2px -4px 0 #011638, -4px -2px 0 #011638, 4px -2px 0 #011638,
+    -2px 4px 0 #011638, 2px -4px 0 #011638, -4px 2px 0 #011638,
+    4px 2px 0 #011638, 2px 4px 0 #011638, -2px -3px 0 #011638,
+    -3px -2px 0 #011638, 3px -2px 0 #011638, -2px 3px 0 #011638,
+    2px -3px 0 #011638, -3px 2px 0 #011638, 3px 2px 0 #011638, 2px 3px 0 #011638,
+    -2px -2px 0 #011638, -2px -2px 0 #011638, 2px -2px 0 #011638,
+    -2px 2px 0 #011638, 2px -2px 0 #011638, -2px 2px 0 #011638,
+    2px 2px 0 #011638, 2px 2px 0 #011638, -2px -1px 0 #011638,
+    -1px -2px 0 #011638, 1px -2px 0 #011638, -2px 1px 0 #011638,
+    2px -1px 0 #011638, -1px 2px 0 #011638, 1px 2px 0 #011638, 2px 1px 0 #011638;
 `;
 
 const Hero = () => {
@@ -111,8 +151,9 @@ const Hero = () => {
       <HeroContentContainer>
         <HeroContentText>
           {/* The Haupt Shop */}
-          Putting You On the Road to Reliability
+          "Putting You On the Road to Reliability"
         </HeroContentText>
+        <HeroContentSubText>-The Haupt Shop Team</HeroContentSubText>
         {/* <HeroContentSubText>We Are Driven to Serve You</HeroContentSubText> */}
         {/* <HeroContentText>Locally Operated, Globally Excelled</HeroContentText> */}
       </HeroContentContainer>
