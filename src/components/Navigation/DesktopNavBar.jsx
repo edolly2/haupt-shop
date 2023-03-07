@@ -6,11 +6,12 @@ import InfoBar from '../InfoBar';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);
-  margin-top: 3.6rem;
-  padding: 32px;
+  margin-top: 3.2rem;
+  padding: 32px 24px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  max-height: 130px;
   /* width: 100%; */
   @media screen and (max-width: 800px) {
     position: relative;

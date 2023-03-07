@@ -8,8 +8,8 @@ import InfoBar from '../InfoBar';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);
-  padding: 24px;
-  margin-top: 24px;
+  padding: 24px 16px;
+  margin-top: 3.2rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

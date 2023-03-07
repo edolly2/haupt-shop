@@ -12,8 +12,8 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 3.6rem;
-  max-height: 3.6rem;
+  min-height: 3.2rem;
+  max-height: 3.2rem;
   z-index: 2;
   @media screen and (max-width: 768px) {
     padding: 2px 24px;
