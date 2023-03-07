@@ -12,6 +12,7 @@ import {
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  gap: 56px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -83,7 +84,7 @@ const ContactPage = () => {
           <InfoP>926 W Court St, Beatrice, NE 68310</InfoP>
         </PageSection>
       </Container>
-      <Container>
+      <Container style={{ marginTop: '56px' }}>
         <PageSection>
           <SectionTitle>Send Us a Message</SectionTitle>
           <ContactForm />
