@@ -7,6 +7,7 @@ import Semi from '../../assets/images/haupt-semi.jpg';
 import Redneck from '../../assets/images/haupt-redneck.jpg';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 import { NavLink } from 'react-router-dom';
+import CarouselSwipe from './CarouselSwipe';
 
 const CarouselContainer = styled.div`
   position: relative;
@@ -67,6 +68,9 @@ const CarouselBtnContainer = styled.div`
   justify-content: center;
   align-items: center;
   /* gap: 50rem; */
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const CarouselBtns = styled.div`
@@ -206,6 +210,7 @@ const Carousel = ({ images }) => {
             <span style={{ fontSize: '18px' }}>NEXT</span> <GrNext />
           </CarouselNextBtn>
         </CarouselBtns>
+        <CarouselSwipe onSwipedLeft={nextImage} onSwipedRight={prevImage} />
       </CarouselBtnContainer>
     </CarouselContainer>
   );
