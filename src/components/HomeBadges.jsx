@@ -12,8 +12,13 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  max-width: 90%;
+  margin: 36px auto;
+  border-radius: 0.4rem;
+  /* position: relative; */
+  /* z-index: 10; */
   @media screen and (max-width: 768px) {
-    padding: 60px 24px;
+    padding: 64px 24px;
   }
 `;
 
@@ -25,8 +30,8 @@ const BadgeContainer = styled.div`
   @media screen and (max-width: 769px) {
     flex-direction: column;
     gap: 2.4rem;
-    /* justify-content: flex-start; */
-    /* align-items: flex-start; */
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
   }
 `;
@@ -37,7 +42,9 @@ const BadgeWrapper = styled.div`
     flex-direction: column;
     gap: 2.4rem;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    /* justify-content: flex-start; */
+    align-items: flex-start;
     width: 100%;
   }
 `;
@@ -50,7 +57,7 @@ const BadgeImg = styled.img`
   /* max-width: 30rem; */
   /* width: 25vw; */
   width: 25vw;
-  max-width: 20rem;
+  max-width: 16rem;
   min-width: 13rem;
   height: auto;
   @media screen and (max-width: 769px) {

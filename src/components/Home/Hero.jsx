@@ -12,6 +12,7 @@ const Container = styled.div`
   background-size: cover;
   background-position: center;
   padding: 36px;
+  box-shadow: inset 0 -20px 10px black, inset 0 -20px 20px black;
 
   display: flex;
   justify-content: flex-end;
@@ -81,7 +82,7 @@ const HeroContentText = styled.h1`
   font-size: calc(30px + (72 - 30) * ((100vw - 360px) / (1500 - 360)));
   font-family: 'Devonshire', cursive;
   color: #eaee00;
-  text-shadow: -4px -4px 0 #011638, 4px -4px 0 #011638, -4px 4px 0 #011638,
+  /*text-shadow: -4px -4px 0 #011638, 4px -4px 0 #011638, -4px 4px 0 #011638,
     4px 4px 0 #011638, 0 -4px 0 #011638, -4px 0 0 #011638, 4px 0 0 #011638,
     0 4px 0 #011638, 1px -4px 0 #011638, -4px 1px 0 #011638, 4px 1px 0 #011638,
     1px 4px 0 #011638, -1px -4px 0 #011638, -4px -1px 0 #011638,
@@ -90,7 +91,8 @@ const HeroContentText = styled.h1`
     2px -4px 0 #011638, -4px 2px 0 #011638, 4px 2px 0 #011638, 2px 4px 0 #011638,
     -3px -4px 0 #011638, -4px -3px 0 #011638, 4px -3px 0 #011638,
     -3px 4px 0 #011638, 3px -4px 0 #011638, -4px 3px 0 #011638,
-    4px 3px 0 #011638, 3px 4px 0 #011638, -3px -3px 0 #011638,
+    4px 3px 0 #011638, 3px 4px 0 #011638, -3px -3px
+      0 #011638,
     -3px -3px 0 #011638, 3px -3px 0 #011638, -3px 3px 0 #011638,
     3px -3px 0 #011638, -3px 3px 0 #011638, 3px 3px 0 #011638, 3px 3px 0 #011638,
     -3px -2px 0 #011638, -2px -3px 0 #011638, 2px -3px 0 #011638,
@@ -107,7 +109,23 @@ const HeroContentText = styled.h1`
     -2px 2px 0 #011638, 2px -2px 0 #011638, -2px 2px 0 #011638,
     2px 2px 0 #011638, 2px 2px 0 #011638, -2px -1px 0 #011638,
     -1px -2px 0 #011638, 1px -2px 0 #011638, -2px 1px 0 #011638,
-    2px -1px 0 #011638, -1px 2px 0 #011638, 1px 2px 0 #011638, 2px 1px 0 #011638;
+    2px -1px 0 #011638, -1px 2px 0 #011638, 1px 2px 0 #011638, 2px 1px 0 #011638;*/
+  text-shadow: -3px -3px 0 #011638, 3px -3px 0 #011638, -3px 3px 0 #011638,
+    3px 3px 0 #011638, -3px -2px 0 #011638, -2px -3px 0 #011638,
+    2px -3px 0 #011638, -3px 2px 0 #011638, 3px -2px 0 #011638,
+    -2px 3px 0 #011638, 2px 3px 0 #011638, 3px 2px 0 #011638,
+    -3px -1px 0 #011638, -1px -3px 0 #011638, 1px -3px 0 #011638,
+    -3px 1px 0 #011638, 3px -1px 0 #011638, -1px 3px 0 #011638,
+    1px 3px 0 #011638, 3px 1px 0 #011638, -2px -2px 0 #011638,
+    -2px -2px 0 #011638, 2px -2px 0 #011638, -2px 2px 0 #011638,
+    2px -2px 0 #011638, -2px 2px 0 #011638, 2px 2px 0 #011638, 2px 2px 0 #011638,
+    -2px -1px 0 #011638, -1px -2px 0 #011638, 1px -2px 0 #011638,
+    -2px 1px 0 #011638, 2px -1px 0 #011638, -1px 2px 0 #011638,
+    1px 2px 0 #011638, 2px 1px 0 #011638, -1px -1px 0 #011638,
+    -1px -1px 0 #011638, 1px -1px 0 #011638, -1px 1px 0 #011638,
+    1px -1px 0 #011638, -1px 1px 0 #011638, 1px 1px 0 #011638, 1px 1px 0 #011638,
+    0 -1px 0 #011638, -1px 0 0 #011638, 1px 0 0 #011638, 0 1px 0 #011638,
+    0 0 3px #011638, 0 0 2px #011638, 0 0 1px #011638;
 `;
 
 const HeroContentSubText = styled.h2`
@@ -116,33 +134,22 @@ const HeroContentSubText = styled.h2`
   text-align: right;
   font-family: 'Devonshire', cursive;
   color: #eaee00;
-  text-shadow: -4px -4px 0 #011638, 4px -4px 0 #011638, -4px 4px 0 #011638,
-    4px 4px 0 #011638, 0 -4px 0 #011638, -4px 0 0 #011638, 4px 0 0 #011638,
-    0 4px 0 #011638, 1px -4px 0 #011638, -4px 1px 0 #011638, 4px 1px 0 #011638,
-    1px 4px 0 #011638, -1px -4px 0 #011638, -4px -1px 0 #011638,
-    4px -1px 0 #011638, -1px 4px 0 #011638, -2px -4px 0 #011638,
-    -4px -2px 0 #011638, 4px -2px 0 #011638, -2px 4px 0 #011638,
-    2px -4px 0 #011638, -4px 2px 0 #011638, 4px 2px 0 #011638, 2px 4px 0 #011638,
-    -3px -4px 0 #011638, -4px -3px 0 #011638, 4px -3px 0 #011638,
-    -3px 4px 0 #011638, 3px -4px 0 #011638, -4px 3px 0 #011638,
-    4px 3px 0 #011638, 3px 4px 0 #011638, -3px -3px 0 #011638,
-    -3px -3px 0 #011638, 3px -3px 0 #011638, -3px 3px 0 #011638,
-    3px -3px 0 #011638, -3px 3px 0 #011638, 3px 3px 0 #011638, 3px 3px 0 #011638,
-    -3px -2px 0 #011638, -2px -3px 0 #011638, 2px -3px 0 #011638,
-    -3px 2px 0 #011638, 3px -2px 0 #011638, -2px 3px 0 #011638,
-    2px 3px 0 #011638, 3px 2px 0 #011638, -3px -1px 0 #011638,
-    -1px -3px 0 #011638, 1px -3px 0 #011638, -3px 1px 0 #011638,
-    3px -1px 0 #011638, -1px 3px 0 #011638, 1px 3px 0 #011638, 3px 1px 0 #011638,
-    -2px -4px 0 #011638, -4px -2px 0 #011638, 4px -2px 0 #011638,
-    -2px 4px 0 #011638, 2px -4px 0 #011638, -4px 2px 0 #011638,
-    4px 2px 0 #011638, 2px 4px 0 #011638, -2px -3px 0 #011638,
-    -3px -2px 0 #011638, 3px -2px 0 #011638, -2px 3px 0 #011638,
-    2px -3px 0 #011638, -3px 2px 0 #011638, 3px 2px 0 #011638, 2px 3px 0 #011638,
-    -2px -2px 0 #011638, -2px -2px 0 #011638, 2px -2px 0 #011638,
-    -2px 2px 0 #011638, 2px -2px 0 #011638, -2px 2px 0 #011638,
-    2px 2px 0 #011638, 2px 2px 0 #011638, -2px -1px 0 #011638,
-    -1px -2px 0 #011638, 1px -2px 0 #011638, -2px 1px 0 #011638,
-    2px -1px 0 #011638, -1px 2px 0 #011638, 1px 2px 0 #011638, 2px 1px 0 #011638;
+  text-shadow: -3px -3px 0 #011638, 3px -3px 0 #011638, -3px 3px 0 #011638,
+    3px 3px 0 #011638, -3px -2px 0 #011638, -2px -3px 0 #011638,
+    2px -3px 0 #011638, -3px 2px 0 #011638, 3px -2px 0 #011638,
+    -2px 3px 0 #011638, 2px 3px 0 #011638, 3px 2px 0 #011638,
+    -3px -1px 0 #011638, -1px -3px 0 #011638, 1px -3px 0 #011638,
+    -3px 1px 0 #011638, 3px -1px 0 #011638, -1px 3px 0 #011638,
+    1px 3px 0 #011638, 3px 1px 0 #011638, -2px -2px 0 #011638,
+    -2px -2px 0 #011638, 2px -2px 0 #011638, -2px 2px 0 #011638,
+    2px -2px 0 #011638, -2px 2px 0 #011638, 2px 2px 0 #011638, 2px 2px 0 #011638,
+    -2px -1px 0 #011638, -1px -2px 0 #011638, 1px -2px 0 #011638,
+    -2px 1px 0 #011638, 2px -1px 0 #011638, -1px 2px 0 #011638,
+    1px 2px 0 #011638, 2px 1px 0 #011638, -1px -1px 0 #011638,
+    -1px -1px 0 #011638, 1px -1px 0 #011638, -1px 1px 0 #011638,
+    1px -1px 0 #011638, -1px 1px 0 #011638, 1px 1px 0 #011638, 1px 1px 0 #011638,
+    0 -1px 0 #011638, -1px 0 0 #011638, 1px 0 0 #011638, 0 1px 0 #011638,
+    0 0 3px #011638, 0 0 2px #011638, 0 0 1px #011638;
 `;
 
 const Hero = () => {
