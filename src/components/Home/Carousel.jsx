@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styled from 'styled-components';
 import Bug from '../../assets/images/haupt-bug-2.jpg';
 import Camaro from '../../assets/images/haupt-camaro.jpg';
@@ -7,13 +7,14 @@ import Semi from '../../assets/images/haupt-semi.jpg';
 import Redneck from '../../assets/images/haupt-redneck.jpg';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 import { NavLink } from 'react-router-dom';
-import CarouselSwipe from './CarouselSwipe';
 
 const CarouselContainer = styled.div`
   position: relative;
   display: flex;
   padding: 72px 32px;
-  background-color: pink;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(33, 33, 33, 0.9);
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
@@ -23,7 +24,7 @@ const CarouselContainer = styled.div`
   z-index: 1;
   height: 100%;
   /* overflow: hidden; */
-  gap: 32px;
+  gap: 48px;
   margin: 3% 0;
   @media screen and (max-width: 768px) {
     padding: 64px 24px;
@@ -57,13 +58,14 @@ const CarouselImg = styled.img`
   /* height: 100%; */
   /* height: auto; */
   /* height: 70vh; */
-  max-height: 70vh;
+  /* max-height: 70vh; */
   object-fit: cover;
   transform: rotate(-6deg);
   position: relative;
   z-index: 1;
-  @media screen and (max-width: 768px) {
-    /* width: 100vw; */
+  width: 100vw;
+  @media screen and (min-width: 768px) {
+    /* min-width: 472.97px; */
     /* height: auto; */
     /* height: 237px; */
   }
@@ -83,7 +85,7 @@ const CarouselBtnContainer = styled.div`
 
 const CarouselBtns = styled.div`
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   margin-top: 2rem;
 `;
@@ -93,7 +95,7 @@ const CarouselPrevBtn = styled.button`
   /* top: 50%; */
   /* transform: translateY(-50%); */
   z-index: 1;
-  font-size: 2em;
+  /* font-size: 2em; */
   /* background-color: rgba(255, 255, 255, 0.5); */
   background-color: transparent;
   border: none;
@@ -109,7 +111,7 @@ const CarouselNextBtn = styled.button`
   /* top: 50%; */
   /* transform: translateY(-50%); */
   z-index: 1;
-  font-size: 2em;
+  /* font-size: 48px; */
   /* background-color: rgba(255, 255, 255, 0.5); */
   background-color: transparent;
   border: none;
@@ -137,9 +139,11 @@ const ImgOverlay = styled.div`
   position: absolute;
   /* top: 0; */
   /* bottom: 0; */
-  height: 70vh;
+  /* height: 70vh; */
   left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
   z-index: 2;
   justify-content: center;
   align-items: center;
@@ -155,6 +159,23 @@ const ImgOverlay = styled.div`
     h2 {
       display: block;
     }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+`;
+
+const CarouselSwipe = styled.div`
+  color: black;
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  font-size: 24px;
+  /* left: 50%; */
+  /* z-index: 30; */
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    display: flex;
   }
 `;
 
@@ -162,6 +183,28 @@ const Carousel = ({ images }) => {
   images = [/*Bug*/ Dodge, Camaro /*Semi*/, Redneck];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+
+  const touchStartX = useRef(null);
+
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchMove = (event) => {
+    if (touchStartX.current === null) {
+      return;
+    }
+
+    const touchEndX = event.touches[0].clientX;
+    const touchDiff = touchStartX.current - touchEndX;
+
+    if (touchDiff > 0 && currentImageIndex < 2) {
+      setCurrentImageIndex(currentImageIndex + 1);
+    } else if (touchDiff < 0 && currentImageIndex > 0) {
+      setCurrentImageIndex(currentImageIndex - 1);
+    }
+    touchStartX.current = null;
+  };
 
   const handleMouseEnter = () => {
     setIsHovering(true);
@@ -186,11 +229,15 @@ const Carousel = ({ images }) => {
       <CarouselBtnContainer>
         <CarouselBtns>
           <CarouselPrevBtn onClick={prevImage}>
-            <GrPrevious /> <span style={{ fontSize: '18px' }}>PREV</span>
+            <GrPrevious className='carousel-btns' />
+            {/* <span style={{ fontSize: '18px' }}>PREV</span> */}
           </CarouselPrevBtn>
         </CarouselBtns>
       </CarouselBtnContainer>
-      <CarouselCarousel>
+      <CarouselCarousel
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
         <CarouselItem>
           <NavLink className='link' to='/haupt-shop/gallery'>
             <ImgOverlay
@@ -206,19 +253,25 @@ const Carousel = ({ images }) => {
             alt='carousel image'
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            // style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
           />
           {/* <NavLink to='/haupt-shop/gallery'>
             <h3>view g</h3>
           </NavLink> */}
         </CarouselItem>
+        <CarouselSwipe>
+          <GrPrevious /> <span style={{ margin: '0 16px' }}>Swipe</span>{' '}
+          <GrNext />
+        </CarouselSwipe>
       </CarouselCarousel>
       <CarouselBtnContainer>
         <CarouselBtns>
           <CarouselNextBtn onClick={nextImage}>
-            <span style={{ fontSize: '18px' }}>NEXT</span> <GrNext />
+            {/* <span style={{ fontSize: '18px' }}>NEXT</span>  */}
+            <GrNext className='carousel-btns' />
           </CarouselNextBtn>
         </CarouselBtns>
-        <CarouselSwipe onSwipedLeft={nextImage} onSwipedRight={prevImage} />
+        {/* <CarouselSwipe onSwipedLeft={nextImage} onSwipedRight={prevImage} /> */}
       </CarouselBtnContainer>
     </CarouselContainer>
   );

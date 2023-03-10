@@ -213,3 +213,7 @@ textarea {
 .invalid-feedback {
   color: red;
 }
+
+.carousel-btns {
+  font-size: 48px;
+}

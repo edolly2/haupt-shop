@@ -5,6 +5,7 @@ import MainLayout from '../../layout/MainLayout';
 import styled from 'styled-components';
 import ContentLayout from '../../layout/ContentLayout';
 import Carousel from './Carousel';
+import SkullsBack from '../../assets/images/skulls-1.jpg';
 
 const Container = styled.div`
   /* display: flex;
@@ -13,18 +14,27 @@ const Container = styled.div`
   background-color: black;
 `;
 
+const Wrapper = styled.div`
+  background-image: url(${SkullsBack});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
 const HomePage = () => {
   return (
     //  <MainLayout>
     <Container>
       <Hero />
-      <ContentLayout>
-        <HomeBadges />
-      </ContentLayout>
-      <ContentLayout>
-        <Carousel />
-        {/* <HomeContent /> */}
-      </ContentLayout>
+      <Wrapper>
+        <ContentLayout>
+          <HomeBadges />
+        </ContentLayout>
+        <ContentLayout>
+          <Carousel />
+          {/* <HomeContent /> */}
+        </ContentLayout>
+      </Wrapper>
     </Container>
     //  </MainLayout>
   );

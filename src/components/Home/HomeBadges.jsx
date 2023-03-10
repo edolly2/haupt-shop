@@ -6,7 +6,11 @@ import Badge3 from '../../assets/images/expert.svg';
 const Container = styled.div`
   min-height: 50vh;
   width: 100%;
-  background-color: #b8cad2;
+  /* background-color: #b8cad2; */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(33, 33, 33, 0.9);
+
   padding: 72px 32px;
   display: flex;
   align-items: center;

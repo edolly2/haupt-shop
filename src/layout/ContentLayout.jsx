@@ -5,8 +5,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3%;
-  margin: 5% 0;
+  padding: 7% 3%;
+  /* margin: 5% 0; */
   position: relative;
   @media screen and (max-width: 768px) {
     /* padding: 1.5%; */
