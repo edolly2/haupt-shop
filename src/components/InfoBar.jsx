@@ -28,7 +28,11 @@ const PhoneLink = styled.a`
   white-space: nowrap;
   /* display: inline-block; */
   width: 50%;
+  @media screen and (max-width: 769px) {
+    color: #eaee00;
+  }
   &:hover {
+    color: #eaee00;
     /* font-weight: 700; */
   }
 `;

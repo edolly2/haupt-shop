@@ -1,8 +1,10 @@
 import Hero from './Hero';
-import HomeBadges from '../HomeBadges';
+import HomeBadges from './HomeBadges';
 import HomeContent from './HomeContent';
 import MainLayout from '../../layout/MainLayout';
 import styled from 'styled-components';
+import ContentLayout from '../../layout/ContentLayout';
+import Carousel from './Carousel';
 
 const Container = styled.div`
   /* display: flex;
@@ -16,8 +18,13 @@ const HomePage = () => {
     //  <MainLayout>
     <Container>
       <Hero />
-      <HomeBadges />
-      <HomeContent />
+      <ContentLayout>
+        <HomeBadges />
+      </ContentLayout>
+      <ContentLayout>
+        <Carousel />
+        {/* <HomeContent /> */}
+      </ContentLayout>
     </Container>
     //  </MainLayout>
   );

@@ -132,6 +132,11 @@ const Time = styled.p`
   /* text-align: right; */
 `;
 
+const SocialGroup = styled.div`
+  display: flex;
+  gap: 24px;
+`;
+
 const Footer = () => {
   return (
     <PageFooter>
@@ -201,10 +206,12 @@ const Footer = () => {
           <FooterGrp>
             <FooterHeading>Social Media</FooterHeading>
             <Line />
-            <FaFacebookSquare />
-            <FaTwitter />
-            <FaYoutube />
-            <FaInstagram />
+            <SocialGroup>
+              <FaFacebookSquare className='icon' />
+              <FaTwitter className='icon' />
+              <FaYoutube className='icon' />
+              <FaInstagram className='icon' />
+            </SocialGroup>
           </FooterGrp>
         </FooterSection>
       </FooterWrapper>

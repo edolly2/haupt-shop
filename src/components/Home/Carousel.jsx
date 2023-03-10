@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import Bug from '../../assets/images/haupt-bug.jpg';
+import Bug from '../../assets/images/haupt-bug-2.jpg';
 import Camaro from '../../assets/images/haupt-camaro.jpg';
 import Dodge from '../../assets/images/haupt-dodge.jpg';
 import Semi from '../../assets/images/haupt-semi.jpg';
@@ -12,16 +12,22 @@ import CarouselSwipe from './CarouselSwipe';
 const CarouselContainer = styled.div`
   position: relative;
   display: flex;
+  padding: 72px 32px;
+  background-color: pink;
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 90%;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
   z-index: 1;
   height: 100%;
   /* overflow: hidden; */
   gap: 32px;
+  margin: 3% 0;
+  @media screen and (max-width: 768px) {
+    padding: 64px 24px;
+  }
 `;
 const CarouselCarousel = styled.div`
   display: flex;
@@ -39,26 +45,27 @@ const CarouselItem = styled.div`
   /* justify-content: center; */
   /* align-items: center; */
   scroll-snap-align: start;
-  background-color: black;
+  background-color: white;
   transform: rotate(6deg);
 `;
 const CarouselImg = styled.img`
-  width: 50vw;
-  /* min-width: 70vw; */
+  /* width: 50vw; */
+  /* max-width: 864.5px; */
+  /* width: 100vw; */
   /* min-width: 100%; */
   /* max-width: 60vw; */
   /* height: 100%; */
   /* height: auto; */
-  height: 70vh;
-  /* max-height: 70vh; */
+  /* height: 70vh; */
+  max-height: 70vh;
   object-fit: cover;
   transform: rotate(-6deg);
   position: relative;
   z-index: 1;
   @media screen and (max-width: 768px) {
-    width: 100vw;
+    /* width: 100vw; */
     /* height: auto; */
-    height: 237px;
+    /* height: 237px; */
   }
 `;
 
@@ -67,6 +74,7 @@ const CarouselBtnContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  /* color: white; */
   /* gap: 50rem; */
   @media screen and (max-width: 768px) {
     display: none;
@@ -151,7 +159,7 @@ const ImgOverlay = styled.div`
 `;
 
 const Carousel = ({ images }) => {
-  images = [Bug, Dodge, Camaro, Semi, Redneck];
+  images = [/*Bug*/ Dodge, Camaro /*Semi*/, Redneck];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
 
