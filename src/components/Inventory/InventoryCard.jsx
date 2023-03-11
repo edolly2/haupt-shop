@@ -3,12 +3,44 @@ import { BsTelephone } from 'react-icons/bs';
 
 const Card = styled.div`
   color: #b8cad2;
-  max-width: 40rem;
+  max-width: 25rem;
+  /* width: 30rem; */
+  width: auto;
   margin: 48px 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(33, 33, 33, 0.9);
+  border-radius: 0.4rem;
+  @media screen and (max-width: 768px) {
+    padding: 16px;
+  }
+`;
+
+const CardImgWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 24px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 16px;
+  }
 `;
 
 const CardImg = styled.img`
   /* margin-bottom: 24px; */
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  /* display: flex;
+  justify-content: center; */
+  /* width: 80%; */
+  padding-bottom: 24px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 16px;
+  }
 `;
 
 const CardTitle = styled.h2`
@@ -29,6 +61,7 @@ const InventoryBtn = styled.button`
   background-color: transparent;
   width: 15rem;
   margin-top: 24px;
+  justify-self: center;
   &:hover {
     cursor: pointer;
     background-color: #005cf0;
@@ -40,7 +73,9 @@ const InventoryBtn = styled.button`
 const InventoryCard = ({ car }) => {
   return (
     <Card>
+      {/* <CardImgWrapper> */}
       <CardImg src={car.image} alt={`${car.year} ${car.make} ${car.model}`} />
+      {/* </CardImgWrapper> */}
       <CardTitle>
         {car.make} {car.model}
       </CardTitle>
@@ -56,7 +91,7 @@ const InventoryCard = ({ car }) => {
       {/* <CardContent> */}
       {/* <ContentLabel>Description:</ContentLabel> {car.description} */}
       {/* </CardContent> */}
-      <CardContent>
+      <CardContent style={{ display: 'flex', justifyContent: 'center' }}>
         <InventoryBtn>
           <BsTelephone /> {car.contact}
         </InventoryBtn>
