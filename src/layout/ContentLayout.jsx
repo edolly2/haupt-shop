@@ -6,10 +6,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 7% 3%;
-  /* margin: 5% 0; */
+  margin: -2px 0;
   position: relative;
   @media screen and (max-width: 768px) {
-    /* padding: 1.5%; */
+    /* padding: 7% 3%; */
     /* margin: 5% 0; */
   }
 `;

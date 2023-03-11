@@ -23,8 +23,14 @@ const PageSection = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(33, 33, 33, 0.9);
+  border-radius: 0.4rem;
+  padding: 24px;
   @media screen and (max-width: 768px) {
     width: 100%;
+    padding: 16px;
   }
 `;
 
@@ -55,6 +61,15 @@ const ContactPage = () => {
       <PageTitle text='Get In Touch' />
       <Container>
         <PageSection>
+          <SectionTitle>Follow Us</SectionTitle>
+          <SocialContainer>
+            <FaFacebookSquare className='icon' />
+            <FaTwitter className='icon' />
+            <FaYoutube className='icon' />
+            <FaInstagram className='icon' />
+          </SocialContainer>
+        </PageSection>
+        <PageSection>
           <SectionTitle>Our Location</SectionTitle>
           <iframe
             title='Directions to the Haupt Shop'
@@ -67,15 +82,7 @@ const ContactPage = () => {
             referrerpolicy='no-referrer-when-downgrade'
           ></iframe>
         </PageSection>
-        <PageSection>
-          <SectionTitle>Social Media</SectionTitle>
-          <SocialContainer>
-            <FaFacebookSquare className='icon' />
-            <FaTwitter className='icon' />
-            <FaYoutube className='icon' />
-            <FaInstagram className='icon' />
-          </SocialContainer>
-        </PageSection>
+
         <PageSection>
           <SectionTitle>Contact Information</SectionTitle>
           <InfoP>Example Name</InfoP>

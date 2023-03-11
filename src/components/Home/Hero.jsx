@@ -12,7 +12,7 @@ const Container = styled.div`
   background-size: cover;
   background-position: center;
   padding: 36px;
-  box-shadow: inset 0 -20px 10px black, inset 0 -20px 20px black;
+  box-shadow: inset 0 -20px 10px #030303, inset 0 -20px 20px #030303;
 
   display: flex;
   justify-content: flex-end;
