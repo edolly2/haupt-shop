@@ -1,5 +1,5 @@
 import PageTitle from '../PageTitle';
-import MainLayout from '../../layout/MainLayout';
+import MainLayout from '../../Layout/MainLayout';
 
 const GalleryPage = () => {
   return (

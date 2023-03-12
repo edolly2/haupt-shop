@@ -1,4 +1,4 @@
-import MainLayout from '../../layout/MainLayout';
+import MainLayout from '../../Layout/MainLayout';
 import PageTitle from '../PageTitle';
 import QuoteForm from './QuoteForm';
 

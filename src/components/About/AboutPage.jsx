@@ -1,19 +1,33 @@
 import PageTitle from '../PageTitle';
-import MainLayout from '../../layout/MainLayout';
+import MainLayout from '../../Layout/MainLayout';
 import styled from 'styled-components';
+import Section from '../../Layout/Section/Section';
+import Spacer from '../../Layout/Spacer';
+import SectionTitle from '../../Layout/Section/SectionTitle';
 
-const Section = styled.div`
-  margin: 0 0 64px 0;
-`;
+// const Section = styled.div`
+//   margin: 0 0 64px 0;
+//   background-color: rgba(255, 255, 255, 0.3);
+//   backdrop-filter: blur(10px);
+//   border: 2px solid rgba(33, 33, 33, 0.9);
+//   padding: 72px 32px;
+//   @media screen and (max-width: 768px) {
+//     padding: 64px 24px;
+//   }
+// `;
 
-const SectionTitle = styled.h2`
-  color: #005cf0;
-  margin-bottom: 16px;
-  text-align: center;
-`;
+// const SectionTitle = styled.h2`
+//   color: #005cf0;
+//   margin-bottom: 16px;
+//   text-align: center;
+//   border-bottom: 2px solid white;
+//   padding-bottom: 8px;
+//   text-shadow: 4px 4px 8px rgb(0, 0, 0);
+// `;
 
 const AboutInfo = styled.p`
   width: 100%;
+  line-height: 2;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 16px;
@@ -21,6 +35,11 @@ const AboutInfo = styled.p`
 
   @media screen and (min-width: 700px) {
     width: 85%;
+  }
+
+  @media screen and (max-width: 900px) {
+    text-indent: 2em;
+    text-align: left;
   }
 
   @media screen and (min-width: 1200px) {
@@ -68,8 +87,7 @@ const AboutPage = () => {
     <MainLayout>
       <PageTitle text='About Us' />
       <Section>
-        <Line></Line>
-        <SectionTitle>Mission Statement</SectionTitle>
+        <SectionTitle title='Mission Statement' textAlign='center' />
         <AboutInfo>
           Here at The Haupt Shop, our goal is to give each client an enjoyable
           and easy experience with the customer care that is above the rest. We
@@ -79,22 +97,22 @@ const AboutPage = () => {
           expertise to have you leaving with the confidence that you got the
           best value and the work was done properly.
         </AboutInfo>
-        <Line></Line>
       </Section>
+      <Spacer />
       <Section>
-        <Line></Line>
-        <SectionTitle>Our Story</SectionTitle>
+        <SectionTitle title='Our Story' textAlign='center' />
+        {/* <SectionTitle>Our Story</SectionTitle> */}
         <AboutInfo>
           We are a family owned and operated business located in Beatrice
           Nebraska. We sell cars at a fair price as well as offer a list of
           services for any of your car needs. We started in XXXX and have been
           building friendships with our clients ever since.
         </AboutInfo>
-        <Line></Line>
       </Section>
+      <Spacer />
       <Section>
-        <Line></Line>
-        <SectionTitle>Meet The Team</SectionTitle>
+        <SectionTitle title='Meet The Team' textAlign='center' />
+        {/* <SectionTitle>Meet The Team</SectionTitle> */}
         <AboutInfo style={{ marginBottom: '48px' }}>
           The Haupt Shop team is full of expert technicians with the experience
           to get any job done to the highest of standards
@@ -117,7 +135,6 @@ const AboutPage = () => {
             <TeamInfoTitle>John Doe</TeamInfoTitle>
           </TeamInfo>
         </TeamInfoContainer>
-        <Line></Line>
       </Section>
     </MainLayout>
   );

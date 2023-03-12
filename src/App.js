@@ -1,5 +1,5 @@
 import './App.css';
-import PageLayout from './layout/PageLayout';
+import PageLayout from './Layout/PageLayout';
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './components/Home/HomePage';
 import AboutPage from './components/About/AboutPage';
