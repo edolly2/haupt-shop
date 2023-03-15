@@ -12,7 +12,8 @@ const CarouselContainer = styled.div`
   position: relative;
   display: flex;
   padding: 72px 32px;
-  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(96, 96, 96, 0.1);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(33, 33, 33, 0.9);
   /* flex-direction: column; */

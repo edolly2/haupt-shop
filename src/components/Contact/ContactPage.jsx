@@ -16,7 +16,7 @@ const Container = styled.div`
   /* max-width: 100%; */
   justify-content: center;
   gap: 56px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 796px) {
     flex-direction: column;
   }
 `;

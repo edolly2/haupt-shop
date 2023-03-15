@@ -7,7 +7,8 @@ const Container = styled.div`
   min-height: 50vh;
   width: 100%;
   /* background-color: #b8cad2; */
-  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(96, 96, 96, 0.1);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(33, 33, 33, 0.9);
 
@@ -18,7 +19,6 @@ const Container = styled.div`
   flex-direction: column;
   max-width: 90%;
   /* margin: 36px auto; */
-  border-radius: 0.4rem;
   /* position: relative; */
   /* z-index: 10; */
   @media screen and (max-width: 768px) {

@@ -49,6 +49,7 @@ const AboutInfo = styled.p`
 
 const TeamInfoContainer = styled.div`
   display: grid;
+  align-content: center;
   text-align: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
@@ -110,7 +111,7 @@ const AboutPage = () => {
         </AboutInfo>
       </Section>
       <Spacer />
-      <Section>
+      <Section justifyContent='center' alignItems='center'>
         <SectionTitle title='Meet The Team' textAlign='center' />
         {/* <SectionTitle>Meet The Team</SectionTitle> */}
         <AboutInfo style={{ marginBottom: '48px' }}>
