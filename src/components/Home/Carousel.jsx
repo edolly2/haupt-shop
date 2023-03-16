@@ -26,7 +26,7 @@ const CarouselContainer = styled.div`
   height: 100%;
   /* overflow: hidden; */
   gap: 48px;
-  margin: 3% 0;
+  margin: 0 0 6% 0;
   @media screen and (max-width: 768px) {
     padding: 64px 24px;
   }

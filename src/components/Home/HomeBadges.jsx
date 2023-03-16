@@ -3,6 +3,7 @@ import Badge1 from '../../assets/images/trusted-dealer.svg';
 import Badge2 from '../../assets/images/satisfaction-g.svg';
 import Badge3 from '../../assets/images/expert.svg';
 import { useState } from 'react';
+import SectionTitle from '../../Layout/Section/SectionTitle';
 
 const Container = styled.div`
   min-height: 50vh;
@@ -12,7 +13,7 @@ const Container = styled.div`
   background-color: rgba(96, 96, 96, 0.1);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(33, 33, 33, 0.9);
-
+  margin: 3% 0 0 0;
   padding: 72px 32px;
   display: flex;
   align-items: center;
@@ -35,7 +36,7 @@ const BadgeContainer = styled.div`
   gap: 4.8rem;
   @media screen and (max-width: 769px) {
     flex-direction: column;
-    gap: 2.4rem;
+    /* gap: 3.2rem; */
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
@@ -53,7 +54,7 @@ const BadgeDesktopWrapper = styled.div`
 `;
 
 const BadgeDesktopInfo = styled.div`
-  min-height: 200px;
+  min-height: 150px;
   display: flex;
   align-items: center;
   /* justify-content: center; */
@@ -66,6 +67,7 @@ const BadgeDesktopInfo = styled.div`
 
 const BadgeWrapper = styled.div`
   display: flex;
+  /* gap: 6.2rem; */
   @media screen and (min-width: 769px) {
     flex-direction: column;
     align-items: center;
@@ -80,13 +82,6 @@ const BadgeWrapper = styled.div`
     /* justify-content: flex-start; */
     width: 100%;
   }
-`;
-
-const BadgeTitle = styled.h2`
-  margin: 0 0 2.4rem 0;
-  color: #005cf0;
-  text-shadow: 4px 4px 8px rgb(0, 0, 0);
-  align-self: center;
 `;
 
 const BadgeImg = styled.img`
@@ -159,8 +154,7 @@ const HomeBadges = () => {
 possible, all at an honest price.`;
   return (
     <Container>
-      <BadgeTitle>Why Choose Us?</BadgeTitle>
-      <Line></Line>
+      <SectionTitle title='Why Choose Us?' textAlign='center' />
       <BadgeDesktopWrapper>
         <BadgeContainer>
           <BadgeWrapper>
