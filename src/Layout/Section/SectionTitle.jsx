@@ -4,9 +4,9 @@ const Title = styled.h2`
   color: #005cf0;
   text-shadow: 4px 4px 8px rgb(0, 0, 0);
   white-space: nowrap;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #b8cad2;
   margin: 0 auto;
-  margin-bottom: 1.6rem;
+  margin-bottom: calc(1.6rem * 1.5);
   padding-bottom: 1.6rem;
   width: 100%;
   /* @media screen and (min-width: 600px) {

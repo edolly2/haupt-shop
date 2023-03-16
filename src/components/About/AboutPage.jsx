@@ -72,17 +72,6 @@ const TeamInfoTitle = styled.h3`
 
 const TeamInfoImg = styled.img``;
 
-const Line = styled.div`
-  width: 70%;
-  height: 4px;
-  background-color: #011638;
-  margin: 32px 0;
-  border-radius: 100%;
-  @media screen and (max-width: 769px) {
-    width: 100%;
-  }
-`;
-
 const AboutPage = () => {
   return (
     <MainLayout>
