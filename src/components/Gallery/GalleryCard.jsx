@@ -8,10 +8,9 @@ const CardContent = styled.p``;
 const CardContentLabel = styled.span``;
 
 const GalleryCard = ({ car }) => {
-  const [readMore, setReadMore] = useState('');
-  const handleClick = (e) => {
-    setReadMore(e.target.value);
-    console.log(e.target.value);
+  const [readMore, setReadMore] = useState(false);
+  const handleClick = () => {
+    setReadMore(!readMore);
   };
   return (
     <Card>
@@ -24,12 +23,10 @@ const GalleryCard = ({ car }) => {
         <CardContentLabel>Project Type:</CardContentLabel> {car.workDone}
       </CardContent>
       <CardContent>
+        {readMore && <CardContent>{car.description}</CardContent>}
         <p style={{ cursor: 'pointer', color: 'white' }} onClick={handleClick}>
-          Read More
+          {readMore ? 'Hide Details' : 'Show Details'}
         </p>
-      </CardContent>
-      <CardContent>
-        <CardContentLabel>Notes:</CardContentLabel> {car.description}
       </CardContent>
     </Card>
   );
