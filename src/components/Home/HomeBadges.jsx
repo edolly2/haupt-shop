@@ -53,6 +53,12 @@ const BadgeDesktopWrapper = styled.div`
 `;
 
 const BadgeDesktopInfo = styled.div`
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 65%;
+  margin: 0 auto;
   @media screen and (max-width: 769px) {
     display: none;
   }
@@ -116,7 +122,7 @@ const BadgeInfo = styled.p`
 const BadgeInfoDesktop = styled.p`
   color: #b8cad2;
   padding: 3%;
-  position: relative;
+  /* position: relative; */
 `;
 
 const Line = styled.div`
@@ -126,19 +132,6 @@ const Line = styled.div`
   /* background-color: #011638; */
   margin: 32px 0;
   border-radius: 100%;
-  @media screen and (max-width: 769px) {
-    width: 100%;
-  }
-`;
-
-const SmallLine = styled.div`
-  width: 70%;
-  height: 4px;
-  background-color: #b8cad2;
-  /* background-color: #011638; */
-  margin: 32px 0;
-  border-radius: 100%;
-  width: 50%;
   @media screen and (max-width: 769px) {
     width: 100%;
   }
@@ -154,10 +147,16 @@ const HomeBadges = () => {
   to build lasting relationships with our customers and treat every
   interaction with the professionalism, transparency, and with the
   quality service necessary to earn your trust.`;
-  const badge3Para = `Our highly skilled technicians are experienced in working on all
+  const badge3Para =
+    /*`Our highly skilled technicians are experienced in working on all
   types of vehicles, from the latest models to classic cars. They
   effectively analyze, troubleshoot, and diagnose any issues
-  that may arise. Quickly and safely getting you back on the road.`;
+  that may arise. Quickly and safely getting you back on the road.`;*/
+    `Our highly skilled technicians are experienced in working on all
+  types of vehicles, from the latest models to classic cars. They
+  effectively analyze, troubleshoot, and diagnose any vehicle issues
+  that may arise. Safely getting you back on the road as quickly as
+possible, all at an honest price.`;
   return (
     <Container>
       <BadgeTitle>Why Choose Us?</BadgeTitle>
@@ -228,7 +227,6 @@ const HomeBadges = () => {
           })()}
         </BadgeDesktopInfo>
       </BadgeDesktopWrapper>
-      <SmallLine></SmallLine>
     </Container>
   );
 };
