@@ -161,7 +161,11 @@ const QuoteModal = (props) => {
             }}
           />
         </OptionP>
-        <OptionBtn>Schedule Visit</OptionBtn>
+        <NavLink to='/haupt-shop/scheduler' className='link'>
+          <OptionBtn onClick={props.schedulerBtnClick}>
+            Schedule Visit
+          </OptionBtn>
+        </NavLink>
       </OptionWrapper>
     </Container>
   );

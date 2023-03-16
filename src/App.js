@@ -14,6 +14,7 @@ import Header from './components/Header';
 import QuoteModal from './components/Quote/QuoteModal';
 import { useState } from 'react';
 import Overlay from './components/Overlay';
+import SchedulerPage from './Scheduler/SchedulerPage';
 
 
 
@@ -25,7 +26,7 @@ function App() {
 
       <PageLayout>
         <Overlay style={{ display: quoteBtnClicked ? 'flex' : 'none' }} />
-        <QuoteModal style={{ display: quoteBtnClicked ? 'flex' : 'none' }} onModalExitClick={() => { setQuoteBtnClicked(false) }} onlineQuoteBtnClick={() => { setQuoteBtnClicked(false) }} />
+        <QuoteModal style={{ display: quoteBtnClicked ? 'flex' : 'none' }} onModalExitClick={() => { setQuoteBtnClicked(false) }} onlineQuoteBtnClick={() => { setQuoteBtnClicked(false) }} schedulerBtnClick={() => { setQuoteBtnClicked(false) }} />
         <Header onQuoteClickMB={() => { setQuoteBtnClicked(true) }} onQuoteClickDT={() => { setQuoteBtnClicked(true) }} />
         <Routes>
           <Route path='/haupt-shop/' exact element={<HomePage />} />
@@ -35,6 +36,8 @@ function App() {
           <Route path='/haupt-shop/inventory' element={<InventoryPage />} />
           <Route path='/haupt-shop/contact' element={<ContactPage />} />
           <Route path='/haupt-shop/quote' element={<QuotePage />} />
+          <Route path='/haupt-shop/scheduler' element={<SchedulerPage />} />
+
         </Routes>
         <Footer />
       </PageLayout>
