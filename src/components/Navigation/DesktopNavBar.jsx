@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/haupt-shop.png';
 import InfoBar from '../InfoBar';
+import Button from '../Button/Button';
 // import { useState } from 'react';
 
 const Container = styled.div`
@@ -51,18 +52,18 @@ const NavLogo = styled.img`
   height: auto;
 `;
 
-const NavBtn = styled.button`
-  padding: 0.4rem;
-  border-radius: 0.4rem;
-  border: 2px solid #005cf0;
-  color: #005cf0;
-  background-color: transparent;
-  &:hover {
-    cursor: pointer;
-    background-color: #005cf0;
-    color: #b8cad2;
-  }
-`;
+// const NavBtn = styled.button`
+//   padding: 0.4rem;
+//   border-radius: 0.4rem;
+//   border: 2px solid #005cf0;
+//   color: #005cf0;
+//   background-color: transparent;
+//   &:hover {
+//     cursor: pointer;
+//     background-color: #005cf0;
+//     color: #b8cad2;
+//   }
+// `;
 
 const DesktopNavBar = (props) => {
   // const [menuActive, setMenuActive] = useState(false);
@@ -95,9 +96,10 @@ const DesktopNavBar = (props) => {
           </NavLink>
           <NavLink>
             <NavListItem>
-              <NavBtn type='button' onClick={props.onQuoteClickDT}>
+              {/* <NavBtn type='button' onClick={props.onQuoteClickDT}>
                 Get a Free Quote
-              </NavBtn>
+              </NavBtn> */}
+              <Button text='Get a Free Quote' onClick={props.onQuoteClickDT} />
             </NavListItem>
           </NavLink>
         </NavList>

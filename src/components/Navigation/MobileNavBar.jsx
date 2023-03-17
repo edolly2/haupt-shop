@@ -5,6 +5,7 @@ import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { CgClose } from 'react-icons/cg';
 import { useState } from 'react';
 import InfoBar from '../InfoBar';
+import Button from '../Button/Button';
 
 const Container = styled.div`
   background-color: rgb(33, 33, 33);
@@ -49,19 +50,19 @@ const NavLogo = styled.img`
   height: auto;
 `;
 
-const NavBtn = styled.button`
-  padding: 0.4rem;
-  border-radius: 0.4rem;
-  border: 2px solid #005cf0;
-  color: #005cf0;
-  background-color: transparent;
-  width: 15rem;
-  &:hover {
-    cursor: pointer;
-    background-color: #005cf0;
-    color: #b8cad2;
-  }
-`;
+// const NavBtn = styled.button`
+//   padding: 0.4rem;
+//   border-radius: 0.4rem;
+//   border: 2px solid #005cf0;
+//   color: #005cf0;
+//   background-color: transparent;
+//   width: 15rem;
+//   &:hover {
+//     cursor: pointer;
+//     background-color: #005cf0;
+//     color: #b8cad2;
+//   }
+// `;
 
 const MobileNavBar = (props) => {
   const [menuActive, setMenuActive] = useState(false);
@@ -157,9 +158,10 @@ const MobileNavBar = (props) => {
             }}
           >
             <NavListItem>
-              <NavBtn type='button' onClick={props.onQuoteClickMB}>
+              {/* <NavBtn type='button' onClick={props.onQuoteClickMB}>
                 Free Quote
-              </NavBtn>
+              </NavBtn> */}
+              <Button text='Free Quote' onClick={props.onQuoteClickMB} />
             </NavListItem>
           </NavLink>
         </NavList>

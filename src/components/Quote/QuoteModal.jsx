@@ -6,6 +6,7 @@ import { useState } from 'react';
 import InPersonQuoteInfo from './InPersonQuoteInfo';
 import QuoteInfoWindow from './QuoteInfoWindow';
 import { NavLink } from 'react-router-dom';
+import Button from '../Button/Button';
 
 const Container = styled.div`
   position: relative;
@@ -43,20 +44,20 @@ const OptionP = styled.p`
   color: #b8cad2;
 `;
 
-const OptionBtn = styled.button`
-  padding: 0.4rem;
-  border-radius: 0.4rem;
-  border: 2px solid #005cf0;
-  color: #005cf0;
-  background-color: transparent;
-  width: 15rem;
-  &:hover {
-    cursor: pointer;
-    background-color: #005cf0;
-    color: #b8cad2;
-    transform: scale(1.1);
-  }
-`;
+// const OptionBtn = styled.button`
+//   padding: 0.4rem;
+//   border-radius: 0.4rem;
+//   border: 2px solid #005cf0;
+//   color: #005cf0;
+//   background-color: transparent;
+//   width: 15rem;
+//   &:hover {
+//     cursor: pointer;
+//     background-color: #005cf0;
+//     color: #b8cad2;
+//     transform: scale(1.1);
+//   }
+// `;
 
 const ExitBtnWrapper = styled.div`
   width: 100%;
@@ -141,12 +142,12 @@ const QuoteModal = (props) => {
           /> */}
         </OptionP>
         <NavLink to='/haupt-shop/quote' className='link'>
-          <OptionBtn
+          {/* <OptionBtn
             onClick={props.onlineQuoteBtnClick}
-            // className='link link-hover'
           >
             Start
-          </OptionBtn>
+          </OptionBtn> */}
+          <Button text='Start' onClick={props.onlineQuoteBtnClick} />
         </NavLink>
       </OptionWrapper>
       <Line />
@@ -162,9 +163,10 @@ const QuoteModal = (props) => {
           />
         </OptionP>
         <NavLink to='/haupt-shop/scheduler' className='link'>
-          <OptionBtn onClick={props.schedulerBtnClick}>
+          {/* <OptionBtn onClick={props.schedulerBtnClick}>
             Schedule Visit
-          </OptionBtn>
+          </OptionBtn> */}
+          <Button text='Schedule Visit' onClick={props.schedulerBtnClick} />
         </NavLink>
       </OptionWrapper>
     </Container>
