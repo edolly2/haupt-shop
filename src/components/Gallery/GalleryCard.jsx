@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 
-const Card = styled.div``;
+const Card = styled.div`
+  color: #b8cad2;
+`;
 const CardImg = styled.img``;
-const CardTitle = styled.h2``;
+const CardTitle = styled.h2`
+  color: #005cf0;
+`;
 const CardContent = styled.p``;
-const CardContentLabel = styled.span``;
+const CardContentLabel = styled.span`
+  color: #005cf0;
+`;
 
 const GalleryCard = ({ car }) => {
   const [readMore, setReadMore] = useState(false);
@@ -24,7 +30,10 @@ const GalleryCard = ({ car }) => {
       </CardContent>
       <CardContent>
         {readMore && <CardContent>{car.description}</CardContent>}
-        <p style={{ cursor: 'pointer', color: 'white' }} onClick={handleClick}>
+        <p
+          style={{ cursor: 'pointer', color: '#eaee00', marginTop: '3%' }}
+          onClick={handleClick}
+        >
           {readMore ? 'Hide Details' : 'Show Details'}
         </p>
       </CardContent>

@@ -47,7 +47,7 @@ const CarouselItem = styled.div`
   /* justify-content: center; */
   /* align-items: center; */
   scroll-snap-align: start;
-  background-color: white;
+  background-color: #011638;
   transform: rotate(6deg);
 `;
 const CarouselImg = styled.img`

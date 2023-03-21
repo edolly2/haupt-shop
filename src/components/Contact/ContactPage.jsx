@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fa';
 import Section from '../../Layout/Section/Section';
 import SectionTitle from '../../Layout/Section/SectionTitle';
+import ResultModal from './ResultModal';
 
 const Container = styled.div`
   display: flex;
@@ -70,6 +71,7 @@ const SocialContainer = styled.div`
 const ContactPage = () => {
   return (
     <MainLayout>
+      {/* <ResultModal /> */}
       <PageTitle text='Get In Touch' />
       <Container>
         <Wrapper>

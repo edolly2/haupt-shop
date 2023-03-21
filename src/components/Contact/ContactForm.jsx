@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import DOMPurify from 'dompurify';
 import styled from 'styled-components';
+import Button from '../Button/Button';
 
 const Form = styled.form`
   display: flex;
@@ -65,16 +66,13 @@ const ContactBtn = styled.button`
   }
 `;
 
-const Result = () => {
-  return (
-    <p>
-      Your message was successfully sent. You will hear from the Haupt Shop team
-      soon. Thank you!
-    </p>
-  );
-};
+// const Result = () => {
+//   return (
 
-const ContactForm = () => {
+//   );
+// };
+
+const ContactForm = (props) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -192,73 +190,75 @@ const ContactForm = () => {
   };
 
   return (
-    <Form ref={form} onSubmit={sendEmail}>
-      <FormGroup>
-        <Label htmlFor='name'>Name</Label>
-        <Input
-          type='text'
-          id='name'
-          name='name'
-          placeholder='John Doe'
-          value={name}
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          onFocus={() => setFocusedInput('name')}
-          // required
-        />{' '}
-        {!errors['name'] ? (
-          <div style={{ color: 'transparent' }}>errors</div>
-        ) : (
-          <div className='invalid-feedback'>{errors['name']}</div>
-        )}
-      </FormGroup>
-      <FormGroup>
-        <Label htmlFor='email'>Email</Label>
-        <Input
-          type='email'
-          id='email'
-          name='email'
-          placeholder='Example@email.com'
-          value={email}
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          onFocus={() => setFocusedInput('email')}
-          // required
-        />
-        {!errors['email'] ? (
-          <div style={{ color: 'transparent' }}>errors</div>
-        ) : (
-          <div className='invalid-feedback'>{errors['email']}</div>
-        )}
-        {/* {focusedInput === 'email' && errors['email'] && (
+    <>
+      <Form ref={form} onSubmit={sendEmail}>
+        <FormGroup>
+          <Label htmlFor='name'>Name</Label>
+          <Input
+            type='text'
+            id='name'
+            name='name'
+            placeholder='John Doe'
+            value={name}
+            onChange={handleInputChange}
+            onBlur={handleInputBlur}
+            onFocus={() => setFocusedInput('name')}
+            // required
+          />{' '}
+          {!errors['name'] ? (
+            <div style={{ color: 'transparent' }}>errors</div>
+          ) : (
+            <div className='invalid-feedback'>{errors['name']}</div>
+          )}
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor='email'>Email</Label>
+          <Input
+            type='email'
+            id='email'
+            name='email'
+            placeholder='Example@email.com'
+            value={email}
+            onChange={handleInputChange}
+            onBlur={handleInputBlur}
+            onFocus={() => setFocusedInput('email')}
+            // required
+          />
+          {!errors['email'] ? (
+            <div style={{ color: 'transparent' }}>errors</div>
+          ) : (
+            <div className='invalid-feedback'>{errors['email']}</div>
+          )}
+          {/* {focusedInput === 'email' && errors['email'] && (
         <div className='invalid-feedback'>{errors['email']}</div>
       )} */}
-      </FormGroup>
-      <FormGroup>
-        <Label htmlFor='message'>Message</Label>
-        <TextArea
-          id='message'
-          name='message'
-          placeholder='Your feedback is important to us...'
-          value={message}
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          onFocus={() => setFocusedInput('message')}
-          rows='10'
-          // required
-        ></TextArea>
-        {!errors['message'] ? (
-          <div style={{ color: 'transparent' }}>errors</div>
-        ) : (
-          <div className='invalid-feedback'>{errors['message']}</div>
-        )}
-        {/* <div className='invalid-feedback'>{errors['message']}</div> */}
-      </FormGroup>
-      <ContactBtn type='submit' value='Send'>
-        Send
-      </ContactBtn>
-      <div>{showResult ? <Result /> : null}</div>
-    </Form>
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor='message'>Message</Label>
+          <TextArea
+            id='message'
+            name='message'
+            placeholder='Your feedback is important to us...'
+            value={message}
+            onChange={handleInputChange}
+            onBlur={handleInputBlur}
+            onFocus={() => setFocusedInput('message')}
+            rows='10'
+            // required
+          ></TextArea>
+          {!errors['message'] ? (
+            <div style={{ color: 'transparent' }}>errors</div>
+          ) : (
+            <div className='invalid-feedback'>{errors['message']}</div>
+          )}
+          {/* <div className='invalid-feedback'>{errors['message']}</div> */}
+        </FormGroup>
+        <ContactBtn type='submit' value='Send'>
+          Send
+        </ContactBtn>
+      </Form>
+      <div>{showResult ? props.child : null}</div>
+    </>
   );
 };
 

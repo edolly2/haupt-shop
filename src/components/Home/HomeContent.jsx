@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Carousel from './Carousel';
-
+import Section from '../../Layout/Section/Section.jsx';
 const Container = styled.div`
   /* max-height: 100vh; */
   /* position: relative; */
@@ -25,9 +25,11 @@ const Container = styled.div`
 
 const HomeContent = () => {
   return (
-    <Container>
+    // <Container>
+    <Section>
       <Carousel />
-    </Container>
+    </Section>
+    //  </Container>
   );
 };
 
