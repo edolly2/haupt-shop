@@ -24,6 +24,7 @@ const ColLeft = styled.div`
   display: flex;
   @media screen and (max-width: 768px) {
     padding-right: 0;
+    flex-direction: column;
   }
 `;
 const ColRight = styled.div`
@@ -32,6 +33,7 @@ const ColRight = styled.div`
   display: flex;
   @media screen and (max-width: 768px) {
     padding-left: 0;
+    flex-direction: column;
   }
   /* align-self: flex-end; */
 `;
