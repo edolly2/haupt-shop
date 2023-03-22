@@ -44,6 +44,7 @@ const InfoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 3%;
+  color: #b8cad2;
 `;
 
 const ServicesPage = () => {
