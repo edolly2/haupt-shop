@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/haupt-shop/static/css/main.9664cec7.css",
-    "main.js": "/haupt-shop/static/js/main.5f64afe8.js",
+    "main.js": "/haupt-shop/static/js/main.1657af70.js",
     "static/media/lifts.jpg": "/haupt-shop/static/media/lifts.75b054ba05ceff99979c.jpg",
     "static/media/skulls-1.jpg": "/haupt-shop/static/media/skulls-1.989a60fc13d1562f064f.jpg",
     "static/media/haupt-shop.png": "/haupt-shop/static/media/haupt-shop.328e3adc62e737de160c.png",
@@ -16,10 +16,10 @@
     "static/media/trusted-dealer.svg": "/haupt-shop/static/media/trusted-dealer.0591f303dd028b635e773483804ab0af.svg",
     "index.html": "/haupt-shop/index.html",
     "main.9664cec7.css.map": "/haupt-shop/static/css/main.9664cec7.css.map",
-    "main.5f64afe8.js.map": "/haupt-shop/static/js/main.5f64afe8.js.map"
+    "main.1657af70.js.map": "/haupt-shop/static/js/main.1657af70.js.map"
   },
   "entrypoints": [
     "static/css/main.9664cec7.css",
-    "static/js/main.5f64afe8.js"
+    "static/js/main.1657af70.js"
   ]
 }
