@@ -1,5 +1,5 @@
 import PageTitle from '../PageTitle';
-import MainLayout from '../../Layout/MainLayout';
+import MainLayout from '../Layout/MainLayout';
 import styled from 'styled-components';
 import GalleryCard from './GalleryCard';
 import { useState } from 'react';

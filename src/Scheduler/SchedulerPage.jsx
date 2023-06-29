@@ -1,6 +1,7 @@
-import MainLayout from '../Layout/MainLayout';
+import MainLayout from '../components/Layout/MainLayout';
 import PageTitle from '../components/PageTitle';
-import Section from '../Layout/Section/Section';
+// import Section from '../Layout/Section/Section';
+import Section from '../components/Layout/Section/Section';
 import SchedulerComponent from './SchedulerComponent';
 
 const SchedulerPage = () => {

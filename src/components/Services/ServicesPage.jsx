@@ -1,7 +1,7 @@
 import PageTitle from '../PageTitle';
-import MainLayout from '../../Layout/MainLayout';
+import MainLayout from '../Layout/MainLayout';
 import styled from 'styled-components';
-import SectionTitle from '../../Layout/Section/SectionTitle';
+import SectionTitle from '../Layout/Section/SectionTitle';
 
 const Container = styled.div`
   width: 100%;

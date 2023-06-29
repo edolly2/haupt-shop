@@ -1,9 +1,9 @@
 import Hero from './Hero';
 import HomeBadges from './HomeBadges';
 import HomeContent from './HomeContent';
-import MainLayout from '../../Layout/MainLayout';
+import MainLayout from '../Layout/MainLayout';
 import styled from 'styled-components';
-import ContentLayout from '../../Layout/ContentLayout';
+import ContentLayout from '../Layout/ContentLayout';
 import Carousel from './Carousel';
 import SkullsBack from '../../assets/images/skulls-1.jpg';
 

@@ -94,6 +94,9 @@ const DesktopNavBar = (props) => {
           <NavLink to='/haupt-shop/contact'>
             <NavListItem>Contact</NavListItem>
           </NavLink>
+          <NavLink to='/haupt-shop/admin'>
+            <NavListItem>ADMIN</NavListItem>
+          </NavLink>
           <NavLink>
             <NavListItem>
               {/* <NavBtn type='button' onClick={props.onQuoteClickDT}>

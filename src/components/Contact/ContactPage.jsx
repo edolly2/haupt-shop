@@ -1,5 +1,5 @@
 import PageTitle from '../PageTitle';
-import MainLayout from '../../Layout/MainLayout';
+import MainLayout from '../Layout/MainLayout';
 import ContactForm from './ContactForm';
 import styled from 'styled-components';
 import {
@@ -8,8 +8,8 @@ import {
   FaYoutube,
   FaInstagram,
 } from 'react-icons/fa';
-import Section from '../../Layout/Section/Section';
-import SectionTitle from '../../Layout/Section/SectionTitle';
+import Section from '../Layout/Section/Section';
+import SectionTitle from '../Layout/Section/SectionTitle';
 import ResultModal from './ResultModal';
 
 const Container = styled.div`

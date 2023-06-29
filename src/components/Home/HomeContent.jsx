@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Carousel from './Carousel';
-import Section from '../../Layout/Section/Section.jsx';
+import Section from '../Layout/Section/Section.jsx';
 const Container = styled.div`
   /* max-height: 100vh; */
   /* position: relative; */

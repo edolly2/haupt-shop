@@ -3,7 +3,7 @@ import Badge1 from '../../assets/images/trusted-dealer.svg';
 import Badge2 from '../../assets/images/satisfaction-g.svg';
 import Badge3 from '../../assets/images/expert.svg';
 import { useState } from 'react';
-import SectionTitle from '../../Layout/Section/SectionTitle';
+import SectionTitle from '../Layout/Section/SectionTitle';
 
 const Container = styled.div`
   min-height: 50vh;

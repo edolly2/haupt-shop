@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import MainLayoutBack from '../assets/images/lifts.jpg';
-import SkullsBack from '../assets/images/skulls-1.jpg';
+import MainLayoutBack from '../../assets/images/lifts.jpg';
+import SkullsBack from '../../assets/images/skulls-1.jpg';
 
 const Container = styled.div`
   /* padding: 7% 3%; */

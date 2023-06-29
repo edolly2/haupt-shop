@@ -1,6 +1,6 @@
-import MainLayout from '../../Layout/MainLayout';
 import PageTitle from '../PageTitle';
 import QuoteForm from './QuoteForm';
+import MainLayout from '../Layout/MainLayout';
 
 const QuotePage = () => {
   return (

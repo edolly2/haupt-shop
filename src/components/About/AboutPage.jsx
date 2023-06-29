@@ -1,9 +1,9 @@
 import PageTitle from '../PageTitle';
-import MainLayout from '../../Layout/MainLayout';
+import MainLayout from '../Layout/MainLayout';
 import styled from 'styled-components';
-import Section from '../../Layout/Section/Section';
-import Spacer from '../../Layout/Spacer';
-import SectionTitle from '../../Layout/Section/SectionTitle';
+import Section from '../Layout/Section/Section';
+import Spacer from '../Layout/Spacer';
+import SectionTitle from '../Layout/Section/SectionTitle';
 
 // const Section = styled.div`
 //   margin: 0 0 64px 0;

@@ -1,7 +1,8 @@
 import './App.css';
-import PageLayout from './Layout/PageLayout';
-import { Route, Routes } from 'react-router-dom'
+import PageLayout from './components/Layout/PageLayout';
+import { Route, Routes } from 'react-router-dom';
 import HomePage from './components/Home/HomePage';
+import AdminPage from './Admin/pages/AdminPage';
 import AboutPage from './components/About/AboutPage';
 import ServicesPage from './components/Services/ServicesPage';
 import ContactPage from './components/Contact/ContactPage';
@@ -16,18 +17,38 @@ import { useState } from 'react';
 import Overlay from './components/Overlay';
 import SchedulerPage from './Scheduler/SchedulerPage';
 
-
-
-
 function App() {
   const [quoteBtnClicked, setQuoteBtnClicked] = useState(false);
   return (
-    <div className="App" style={{ maxHeight: quoteBtnClicked ? '100vh' : null, overflow: quoteBtnClicked ? 'hidden' : null }}>
-
+    <div
+      className='App'
+      style={{
+        maxHeight: quoteBtnClicked ? '100vh' : null,
+        overflow: quoteBtnClicked ? 'hidden' : null,
+      }}
+    >
       <PageLayout>
         <Overlay style={{ display: quoteBtnClicked ? 'flex' : 'none' }} />
-        <QuoteModal style={{ display: quoteBtnClicked ? 'flex' : 'none' }} onModalExitClick={() => { setQuoteBtnClicked(false) }} onlineQuoteBtnClick={() => { setQuoteBtnClicked(false) }} schedulerBtnClick={() => { setQuoteBtnClicked(false) }} />
-        <Header onQuoteClickMB={() => { setQuoteBtnClicked(true) }} onQuoteClickDT={() => { setQuoteBtnClicked(true) }} />
+        <QuoteModal
+          style={{ display: quoteBtnClicked ? 'flex' : 'none' }}
+          onModalExitClick={() => {
+            setQuoteBtnClicked(false);
+          }}
+          onlineQuoteBtnClick={() => {
+            setQuoteBtnClicked(false);
+          }}
+          schedulerBtnClick={() => {
+            setQuoteBtnClicked(false);
+          }}
+        />
+        <Header
+          onQuoteClickMB={() => {
+            setQuoteBtnClicked(true);
+          }}
+          onQuoteClickDT={() => {
+            setQuoteBtnClicked(true);
+          }}
+        />
         <Routes>
           <Route path='/haupt-shop/' exact element={<HomePage />} />
           <Route path='/haupt-shop/about' element={<AboutPage />} />
@@ -37,11 +58,10 @@ function App() {
           <Route path='/haupt-shop/contact' element={<ContactPage />} />
           <Route path='/haupt-shop/quote' element={<QuotePage />} />
           <Route path='/haupt-shop/scheduler' element={<SchedulerPage />} />
-
+          <Route path='/haupt-shop/admin' element={<AdminPage />} />
         </Routes>
         <Footer />
       </PageLayout>
-
     </div>
   );
 }
